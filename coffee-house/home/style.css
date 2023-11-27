@@ -93,7 +93,6 @@ html {
     font-size: 16px;
     line-height: 24px;
     color: var(--text-dark);
-    /* letter-spacing: 0.01rem; */
     text-decoration: none;
     transition: 1s;
 }
@@ -259,6 +258,78 @@ html {
 }
 .bar-active {
     background: var(--border-dark);
+}
+
+/* ABOUT */
+.about-background {
+    padding: 0 40px;
+    margin-bottom: 100px;
+}
+.about-section {
+    display: flex;
+    flex-direction: column;
+}
+.title-about {
+    margin-bottom: 40px;
+    text-align: start;
+}
+.foto-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.foto-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.foto-coffee-girl {
+    display: flex;
+    width: 660px;
+    height: 590px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: url(../assets/img/coffee-girl.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+.foto-cup-with-lights {
+    display: flex;
+    width: 660px;
+    height: 430px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: url(../assets/img/cup-with-lights.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+.foto-coffee-boy {
+    display: flex;
+    width: 660px;
+    height: 430px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: url(../assets/img/coffee-boy.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+.foto-happy-couple {
+    display: flex;
+    width: 660px;
+    height: 590px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: url(../assets/img/happy-couple.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
 }
 
 
