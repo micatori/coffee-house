@@ -52,6 +52,7 @@ body {
 
 body,
 html {
+    background: var(--background-body);
     height: 100%;
 }
 
@@ -70,7 +71,7 @@ html {
 }
 .nav {
     display: flex;
-    margin-left: 30px;
+    margin-left: 37px;
 }
 .nav-list {
     display: flex;
