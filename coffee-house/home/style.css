@@ -105,3 +105,70 @@ html {
 .menu-img {
     margin-left: 8px;
 }
+
+/* ENJOY */
+.enjoy-background {
+    padding: 0 40px;
+}
+.enjoy-wrapper {
+    height: 644px;
+    width: 1360px;
+    border-radius: 40px;
+    background: url(../assets/img/enjoy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -30px;
+}
+.enjoy-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 720px;
+    padding: 100px;
+    gap: 40px;
+}
+.enjoy-title {
+    color: var(--text-light);
+    /* font-feature-settings: 'clig' off, 'liga' off; */
+    font-family: Inter;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 105%;
+}
+.title-accent {
+    color: var(--text-accent);
+    font-style: italic;
+}
+.enjoy-text {
+    color: var(--text-light);
+    /* font-feature-settings: 'clig' off, 'liga' off; */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 64px;
+    padding: 20px 78px;
+    gap: 8px;
+    background: var(--background-body);
+    border-radius: 100px;
+    text-decoration: none;
+    transition: 1s;
+}
+.enjoy-button-text {
+    color: var(--text-dark);
+    text-align: center;
+    /* font-feature-settings: 'clig' off, 'liga' off; */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+}
