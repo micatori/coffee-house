@@ -72,6 +72,7 @@ html {
 .nav {
     display: flex;
     margin-left: 37px;
+    align-items: center;
 }
 .nav-list {
     display: flex;
@@ -79,7 +80,8 @@ html {
     padding: 0;
 }
 .nav-item {
-    display: flex;
+    display: inline-block;
+    cursor: pointer;
     align-items: center;
     margin-left: 0;
     margin-right: 40px;
@@ -95,12 +97,34 @@ html {
     line-height: 24px;
     color: var(--text-dark);
     text-decoration: none;
-    transition: 1s;
+    transition: 0.1s;
+}
+
+.nav-item:after,
+.menu-link:after {
+    display: block;
+    margin: auto;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #403F3D;
+    transition: width 0.5s ease-in-out;
+}
+.nav-item:hover:after,
+.nav-item:focus:after,
+.menu-link:hover:after,
+.menu-link:focus:after {
+    width: 100%;
+}
+.menu-link-wrapper {
+    display: flex;
+    margin-top: 15px;
 }
 .menu-link {
-    display: flex;
+    display: inline-block;
     align-items: center;
     text-decoration: none;
+    cursor: pointer;
 }
 .menu-img {
     margin-left: 8px;
