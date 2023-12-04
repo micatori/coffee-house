@@ -107,8 +107,8 @@ html {
     content: "";
     width: 0%;
     height: 2px;
-    background: #403F3D;
-    transition: width 0.5s ease-in-out;
+    background: var(--text-dark);
+    transition: all 0.5s ease-in-out;
 }
 .nav-item:hover:after,
 .nav-item:focus:after,
@@ -183,8 +183,10 @@ html {
     background: var(--background-body);
     border-radius: 100px;
     text-decoration: none;
-    transition: 1s;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
 }
+
 .enjoy-button-text {
     color: var(--text-dark);
     text-align: center;
@@ -193,8 +195,22 @@ html {
     font-style: normal;
     font-weight: 600;
     line-height: 150%; /* 24px */
+    margin-left: 30px;
+    transition: all 0.5s ease-in-out;
 }
 
+.menu-img-button {
+    z-index: -5;
+    transition: all 0.5s ease-in-out;
+}
+.button:hover .enjoy-button-text {
+    margin-left: 0;
+    transition: all 0.5s ease-in-out;
+}
+.button:hover .menu-img-button {
+    z-index: 0;
+    transition: all 0.5s ease-in-out;
+}
 /* FAVORITE */
 .favorite-background {
     padding: 0 40px;
@@ -423,7 +439,7 @@ html {
     text-align: start;
 }
 .mobole-app-title {
-    color: var(--text-dark, #403F3D);
+    color: var(--text-dark);
     font-family: 'Inter';
     font-size: 16px;
     font-style: normal;
