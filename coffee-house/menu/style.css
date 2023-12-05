@@ -148,6 +148,7 @@ html {
     line-height: 125%; /* 75px */
     /* margin-bottom: 40px; */
     color: var(--text-dark);
+    align-self: center;
 }
 .buttons-wrapper {
     display: flex;
@@ -226,7 +227,138 @@ html {
     flex-wrap: wrap;
     gap: 40px;
 }
-
+/* MENU */
+.menu-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.coffee-description {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    border-radius: 40px;
+    border: 1px solid var(--border-light);
+    max-width: 310px;
+    height: 505px;
+    padding-bottom: 20px;
+}
+.coffee-description:hover {
+    cursor: pointer;
+}
+.coffee-description:hover .image-background {
+    transition: all 0.5s;
+    cursor: pointer;
+    background-size: 100%;
+}
+.wrapper-coffee-article {
+    display: flex;
+    flex-direction: column;
+}
+.coffee-description-title {
+    color: var(--text-dark);
+    text-align: center;
+    align-self: start;
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 30px */
+    margin: 20px auto 10px 20px;
+}
+.coffee-description-text {
+    color: var(--text-dark);
+    text-align: left;
+    margin-left: 20px;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    max-width: 270px;
+}
+.coffee-description-price {
+    color: var(--text-dark);
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 36px;
+    margin-bottom: 0;
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 30px */
+}
+.prace-1-margin-top {
+    margin-top: 15px;
+}
+.prace-5-margin-top {
+    margin-top: 60px;
+}
+.prace-6-margin-top {
+    margin-top: 10px;
+}
+.image-background {
+    display: flex;
+    width: 310px;
+    height: 310px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.image-1 {
+    background: url(../assets/img/irish-coffee.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+.image-2 {
+    background: url(../assets/img/kahlua-2.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+.image-3 {
+    background: url(../assets/img/honey-3.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+.image-4 {
+    background: url(../assets/img/cappucino-4.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+.image-5 {
+    background: url(../assets/img/espresso-5.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+.image-6 {
+    background: url(../assets/img/latte-6.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+.image-7 {
+    background: url(../assets/img/latte-m-7.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+.image-8 {
+    background: url(../assets/img/coffee-8-cogn.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+/* background: url(<path-to-image>), lightgray 50% / cover no-repeat; */
 /* FOOTER */
 .footer {
     padding: 0 40px 40px;
@@ -335,6 +467,9 @@ html {
 .footer-link-container-hours {
     display: flex;
     gap: 8px;
+}
+.footer-link-container-hours {
+    margin-top: 5px;
 }
 .work-hours-wrapper {
     margin-bottom: 10px;
