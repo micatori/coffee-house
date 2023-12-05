@@ -265,7 +265,6 @@ html {
 .btn-arrow:hover .color-of-arrow {
     stroke: var(--background-body);
     transition: stroke 1s;
-
 }
 .coffee-description {
     display: flex;
@@ -355,7 +354,10 @@ html {
     background-repeat: no-repeat;
     background-size: 110%;
     background-position: center;
+    cursor: pointer;
+    transition: all 1s;
 }
+
 .foto-cup-with-lights {
     display: flex;
     width: 660px;
@@ -367,7 +369,10 @@ html {
     background-repeat: no-repeat;
     background-size: 110%;
     background-position: center;
+    cursor: pointer;
+    transition: all 1s;
 }
+
 .foto-coffee-boy {
     display: flex;
     width: 660px;
@@ -379,6 +384,8 @@ html {
     background-repeat: no-repeat;
     background-size: 110%;
     background-position: center;
+    cursor: pointer;
+    transition: all 1s;
 }
 .foto-happy-couple {
     display: flex;
@@ -391,6 +398,16 @@ html {
     background-repeat: no-repeat;
     background-size: 110%;
     background-position: center;
+    cursor: pointer;
+    transition: all 1s;
+}
+.foto-coffee-girl:hover,
+.foto-cup-with-lights:hover,
+.foto-coffee-boy:hover,
+.foto-happy-couple:hover {
+    cursor: pointer;
+    background-size: 100%;
+    transition: all 1s;
 }
 /* MOBILE APP */
 .mobile-app-background {
