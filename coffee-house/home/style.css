@@ -246,7 +246,7 @@ html {
     fill: var(--background-container);
     transition: fill 1s;
 }
-/* stroke="#403F3D" */
+
 .color-of-arrow {
     stroke: var(--text-dark);
     transition: stroke 1s;
@@ -263,7 +263,6 @@ html {
     margin-top: 20px;
     gap: 16px;
     max-width: 480px;
-
 }
 .coffee-description-title {
     color: var(--text-dark);

@@ -137,6 +137,7 @@ html {
     flex-direction: column;
     text-align: center;
     margin: 0 auto;
+    gap: 40px;
 }
 .main-title {
     width: 800px;
@@ -145,12 +146,14 @@ html {
     font-style: normal;
     font-weight: 600;
     line-height: 125%; /* 75px */
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     color: var(--text-dark);
 }
 .buttons-wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: 16px;
 }
 .button {
     display: flex;
@@ -164,9 +167,20 @@ html {
     background: var(--background-container);
     border-style: none;
 }
+.button-color-inactive {
+    border: 1px solid var(--border-light);
+    background-color: var(--background-body);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.button-color-inactive:hover {
+    background: var(--background-container);
+    border-style: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
 .button-image-wrapper {
     display: flex;
-    content: "☕";
     width: 30px;
     height: 30px;
     padding: 3px 7px;
@@ -174,8 +188,20 @@ html {
     align-items: center;
     border-radius: 100px;
     background: var(--background-body);
+    cursor: pointer;
+    transition: all 0.5s;
 }
 
+.button-image-wrapper-color-inactive {
+    background-color: var(--border-light);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.button-color-inactive:hover .button-image-wrapper-color-inactive {
+    background: var(--background-body);
+    cursor: pointer;
+    transition: all 0.5s;
+}
 .button-text {
     color: var(--text-light);
     font-family: 'Inter';
@@ -183,6 +209,16 @@ html {
     font-style: normal;
     font-weight: 600;
     line-height: 150%; /* 24px */
+}
+.button-text-color-inactive {
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.button-color-inactive:hover .button-text-color-inactive {
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.5s;
 }
 .main-menu {
     display: flex;
