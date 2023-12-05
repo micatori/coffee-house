@@ -551,6 +551,23 @@ html {
     border-radius: 100px;
     border: 1px solid var(--border-light);
     background: var(--background-container);
+    cursor: pointer;
+    transition: all 1s;
+}
+.button-social-svg > path {
+    stroke: var(--background-body);
+    cursor: pointer;
+    transition: all 1s;
+}
+.button-social:hover {
+    background-color: var(--background-body);
+    cursor: pointer;
+    transition: all 1s;
+}
+.button-social:hover .button-social-svg > path {
+    stroke: var(--text-dark);
+    cursor: pointer;
+    transition: all 1s;
 }
 
 /* Second footer column */
