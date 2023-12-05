@@ -201,6 +201,7 @@ html {
 
 .menu-img-button {
     z-index: -5;
+    opacity: 0.7;
     transition: all 0.5s ease-in-out;
 }
 .button:hover .enjoy-button-text {
@@ -209,6 +210,7 @@ html {
 }
 .button:hover .menu-img-button {
     z-index: 0;
+    opacity: 1;
     transition: all 0.5s ease-in-out;
 }
 /* FAVORITE */
@@ -245,7 +247,25 @@ html {
     width: 480px;
 }
 .btn-arrow {
-    margin-top: 200px;
+    margin-top: 330px;
+    cursor: pointer;
+    fill: var(--background-body);
+    transition: fill 1s;
+}
+.btn-arrow:hover {
+    cursor: pointer;
+    fill: var(--background-container);
+    transition: fill 1s;
+}
+/* stroke="#403F3D" */
+.color-of-arrow {
+    stroke: var(--text-dark);
+    transition: stroke 1s;
+}
+.btn-arrow:hover .color-of-arrow {
+    stroke: var(--background-body);
+    transition: stroke 1s;
+
 }
 .coffee-description {
     display: flex;
