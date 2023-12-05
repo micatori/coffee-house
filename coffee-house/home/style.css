@@ -584,19 +584,43 @@ html {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
-    gap: 20px;
+    gap: 15px;
 }
 .footer-link-container {
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
     text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.map {
+    width: 182px;
+}
+.tel {
+    width: 175px;
+}
+.footer-link-container:after {
+    display: block;
+    margin: auto;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--background-body);
+    transition: all 0.5s ease-in-out;
+}
+.footer-link-container:hover:after,
+.footer-link-container:focus:after {
+    width: 100%;
+}
+.footer-link-wrapper-line,
+.footer-link-container-hours {
+    display: flex;
     gap: 8px;
 }
 .work-hours-wrapper {
     margin-bottom: 10px;
 }
 .footer-list-item-text {
-    color: var(--text-light, #E1D4C9);
+    color: var(--text-light);
     font-family: 'Inter';
     font-size: 16px;
     font-style: normal;
