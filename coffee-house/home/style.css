@@ -459,11 +459,38 @@ html {
     gap: 8px;
     border-radius: 100px;
     border: 1px solid var(--border-dark);
+    cursor: pointer;
+    transition: all 1s;
+}
+.button-app:hover {
+    cursor: pointer;
+    background-color: var(--border-dark);
+    transition: all 1s;
+}
+.button-app:hover .mobile-app-p {
+    color: var(--background-body);
+    cursor: pointer;
+    transition: all 1s;
+}
+.button-app:hover .mobole-app-title {
+    color: var(--background-body);
+    cursor: pointer;
+    transition: all 1s;
 }
 .mobile-app-description {
     display: flex;
     flex-direction: column;
     gap: 2px;
+}
+.img-mobile-app > path {
+    fill: var(--text-dark);
+    cursor: pointer;
+    transition: all 1s;
+}
+.button-app:hover .img-mobile-app > path {
+    cursor: pointer;
+    transition: all 1s;
+    fill: var(--background-body);
 }
 .mobile-app-p {
     color: var(--text-dark);
