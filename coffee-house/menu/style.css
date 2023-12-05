@@ -123,3 +123,120 @@ html {
 .menu-img {
     margin-left: 8px;
 }
+
+/* FOOTER */
+.footer {
+    padding: 0 40px 40px;
+}
+.footer-wrapper {
+    padding: 100px;
+    border-radius: 40px;
+    background: var(--background-container);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-wrapper-column {
+    display: flex;
+    flex-direction: column;
+    width: 530px;
+}
+.footer-title {
+    color: var(--text-light, #E1D4C9);
+    font-family: 'Inter';
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 75px */
+    margin-bottom: 40px;
+}
+.cosial-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.button-social {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid var(--border-light);
+    background: var(--background-container);
+    cursor: pointer;
+    transition: all 1s;
+}
+.button-social-svg > path {
+    stroke: var(--background-body);
+    cursor: pointer;
+    transition: all 1s;
+}
+.button-social:hover {
+    background-color: var(--background-body);
+    cursor: pointer;
+    transition: all 1s;
+}
+.button-social:hover .button-social-svg > path {
+    stroke: var(--text-dark);
+    cursor: pointer;
+    transition: all 1s;
+}
+
+/* Second footer column */
+.footer-title-h3 {
+    margin-top: 35px;
+    color: var(--text-light);
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 30px */
+}
+.wrapper-footer-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 15px;
+}
+.footer-link-container {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.map {
+    width: 182px;
+}
+.tel {
+    width: 175px;
+}
+.footer-link-container:after {
+    display: block;
+    margin: auto;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--background-body);
+    transition: all 0.5s ease-in-out;
+}
+.footer-link-container:hover:after,
+.footer-link-container:focus:after {
+    width: 100%;
+}
+.footer-link-wrapper-line,
+.footer-link-container-hours {
+    display: flex;
+    gap: 8px;
+}
+.work-hours-wrapper {
+    margin-bottom: 10px;
+}
+.footer-list-item-text {
+    color: var(--text-light);
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+}
