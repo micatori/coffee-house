@@ -51,6 +51,9 @@ html {
 }
 
 /* HEADER */
+.h1-title {
+    display: none;
+}
 .header-wrapper {
     display: flex;
     flex-direction: row;
@@ -116,12 +119,76 @@ html {
 }
 .menu-link {
     display: inline-block;
-    align-items: center;
     text-decoration: none;
-    cursor: pointer;
+    cursor: default;
 }
 .menu-img {
     margin-left: 8px;
+}
+
+/* MAIN */
+.main {
+    display: flex;
+    padding: 0 40px 100px;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+.main-title {
+    width: 800px;
+    font-family: 'Inter';
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; /* 75px */
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+.buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.button {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 16px 8px 8px;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--background-container);
+    border-style: none;
+}
+.button-image-wrapper {
+    display: flex;
+    content: "☕";
+    width: 30px;
+    height: 30px;
+    padding: 3px 7px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: var(--background-body);
+}
+
+.button-text {
+    color: var(--text-light);
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+}
+.main-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 /* FOOTER */
@@ -142,7 +209,7 @@ html {
     width: 530px;
 }
 .footer-title {
-    color: var(--text-light, #E1D4C9);
+    color: var(--text-light);
     font-family: 'Inter';
     font-size: 60px;
     font-style: normal;
@@ -184,6 +251,10 @@ html {
 }
 
 /* Second footer column */
+.section-title-accent {
+    color: var(--text-accent);
+    font-style: italic;
+}
 .footer-title-h3 {
     margin-top: 35px;
     color: var(--text-light);
