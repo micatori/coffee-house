@@ -1,3 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+@media screen {
+    html,
+    body {
+      scroll-behavior: smooth;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+}
+
 :root {
     --white-color: #ffffff;
+    --text-dark: #403F3D;
+    --text-accent: #B0907A;
+    --text-light: #E1D4C9;
+    --background-body: #E1D4C9;
+    --background-container: #665F55;
+    --border-dark: #665F55;
+    --border-light: #C1B6AD;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body,
+html {
+    background: var(--background-body);
+    height: 100%;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+.nav {
+    display: flex;
+    margin-left: 37px;
+    align-items: center;
+}
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.nav-item {
+    display: inline-block;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 40px;
+    padding: 0;
+}
+
+.nav-link,
+.menu-p {
+    font-family: 'Inter', sans-serif;
+    font-style: bold;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+.nav-item:after,
+.menu-link:after {
+    display: block;
+    margin: auto;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--text-dark);
+    transition: all 0.5s ease-in-out;
+}
+.menu-link:after {
+    width: 100%;
+    pointer-events: none;
+    cursor: default;
+}
+.nav-item:hover:after,
+.nav-item:focus:after,
+.menu-link:hover:after,
+.menu-link:focus:after {
+    width: 100%;
+}
+.menu-link-wrapper {
+    display: flex;
+    margin-top: 15px;
+}
+.menu-link {
+    display: inline-block;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.menu-img {
+    margin-left: 8px;
 }
