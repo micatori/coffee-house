@@ -684,13 +684,51 @@ html {
         width: 686px;
         background-size: 105%;
     }
+    .enjoy-wrapper {
+        max-height: 644px;
+    }
+    .enjoy-button-text {
+        margin-left: 0;
+    }
+    .menu-img-button {
+        z-index: 0;
+        opacity: 1;
+    }
 }
 @media screen and (max-width: 769px) {
 
 }
-@media screen and (min-width: 379px) and (max-width: 769px) {
-/* от 380 до 768 */
-}
-@media screen and (min-width: 20px) and (max-width: 380px) {
+@media screen and (min-width: 379px) and (max-width: 767px) {
+/* от 380 до 767 */
+    .header-wrapper {
+        padding: 20px 16px;
+    }
+    .enjoy-background {
+        padding: 0 16px;
+    }
+    .enjoy-wrapper {
+        max-height: 552px;
+    }
+    .enjoy-section {
+        max-width: 720px;
+        padding: 60px 16px;
+    }
+    .enjoy-title,
+    .title-accent {
+        font-size: 42px;
+        line-height: 115%; /* 48.3px */
+    }
+    .enjoy-button-text {
+        margin-left: 0;
+    }
+    .menu-img-button {
+        z-index: 0;
+        opacity: 1;
+    }
 
+}
+@media screen and (min-width: 20px) and (max-width: 400px) {
+    .enjoy-section {
+        max-width: 348px;
+    }
 }
