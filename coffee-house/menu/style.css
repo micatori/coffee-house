@@ -482,3 +482,29 @@ html {
     font-weight: 600;
     line-height: 150%; /* 24px */
 }
+
+@media screen and (max-width: 1001px) {
+    .footer-wrapper {
+        flex-direction: column;
+        padding: 100px 60px 108px;
+    }
+    .cosial-wrapper {
+        margin-bottom: 65px;
+    }
+}
+@media screen and (max-width: 800px) {
+    /* от 801 и выше */
+    .nav {
+        display: none;
+    }
+    .menu-link {
+        display: none;
+    }
+    .burger-button {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        justify-content: center;
+        align-self: center;
+    }
+}
