@@ -646,6 +646,15 @@ html {
         margin-top: 100px;
     }
 }
+@media screen and (max-width: 1001px) {
+    .footer-wrapper {
+        flex-direction: column;
+        padding: 100px 60px 108px;
+    }
+    .cosial-wrapper {
+        margin-bottom: 65px;
+    }
+}
 @media screen and (max-width: 800px) {
     /* от 801 и выше */
     .nav {
