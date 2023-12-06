@@ -133,7 +133,8 @@ html {
     background: url(../assets/img/enjoy.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -30px;
+    /* background-position-y: -30px; */
+    background-position: center;
 }
 .enjoy-section {
     display: flex;
@@ -618,7 +619,9 @@ html {
     line-height: 150%; /* 24px */
 }
 @media screen and (max-width: 1440px) {
-
+    .enjoy-section {
+        padding: 100px 130px 100px 60px;
+    }
 }
 @media screen and (max-width: 800px) {
     /* от 801 и выше */
