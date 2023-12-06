@@ -623,6 +623,17 @@ html {
         padding: 100px 130px 100px 60px;
     }
 }
+@media screen and (max-width: 1421px) {
+    .foto-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+    .foto-column {
+        margin: 0 auto;
+    }
+}
 @media screen and (max-width: 800px) {
     /* от 801 и выше */
     .nav {
@@ -637,6 +648,20 @@ html {
         height: 44px;
         justify-content: center;
         align-self: center;
+    }
+    .foto-cup-with-lights {
+        display: none;
+    }
+    .foto-coffee-boy {
+        display: none;
+    }
+    .foto-coffee-girl {
+        width: 686px;
+        background-size: 105%;
+    }
+    .foto-happy-couple {
+        width: 686px;
+        background-size: 105%;
     }
 }
 @media screen and (max-width: 769px) {
