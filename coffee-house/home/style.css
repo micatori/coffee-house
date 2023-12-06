@@ -634,6 +634,18 @@ html {
         margin: 0 auto;
     }
 }
+@media screen and (max-width: 1141px) {
+    .mobile-app-wrapper {
+        flex-direction: column;
+    }
+    .mobile-app-section {
+        width: 688px;
+    }
+    .mobile-app-image {
+        align-self: center;
+        margin-top: 100px;
+    }
+}
 @media screen and (max-width: 800px) {
     /* от 801 и выше */
     .nav {
