@@ -549,12 +549,31 @@ html {
     .footer-wrapper-column {
         max-width: 530px;
     }
+    .buttons-wrapper {
+        gap: 8px;
+    }
+    .main-wrapper {
+        gap: 41px;
+    }
+}
+@media screen and (max-width: 721px) {
+    .menu-section {
+        flex-direction: column;
+        align-content: center;
+    }
+    .main-title {
+        max-width: 500px;
+    }
 }
 @media screen and (min-width: 360px) and (max-width: 767px) {
     /* от 380 до 767 */
     .header-wrapper {
         padding: 20px 16px;
     }
+    .main {
+        padding: 0 16px 100px;
+    }
+    .main-title,
     .section-title,
     .section-title-accent {
         font-size: 32px;
@@ -577,6 +596,9 @@ html {
     }
 }
 @media screen and (min-width: 20px) and (max-width: 400px) {
+    .main-title {
+        max-width: 348px;
+    }
     .footer-wrapper-column {
         width: 316px;
     }
