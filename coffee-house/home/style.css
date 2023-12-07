@@ -703,7 +703,7 @@ html {
         display: none;
     }
 }
-@media screen and (min-width: 379px) and (max-width: 767px) {
+@media screen and (min-width: 360px) and (max-width: 767px) {
 /* от 380 до 767 */
     .header-wrapper {
         padding: 20px 16px;
@@ -744,12 +744,45 @@ html {
         height: 100%;
         width: 100%;
     }
+    /* ABOUT */
+    .about-background {
+        padding: 0 16px;
+    }
+    .foto-coffee-girl {
+        width: 500px;
+        height: 590px;
+        background-size: 150%;
+    }
+    .foto-happy-couple {
+        width: 500px;
+        height: 590px;
+        background-size: 150%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .foto-coffee-girl {
+        width: 360px;
+        height: 590px;
+        background-size: 200%;
+    }
+    .foto-happy-couple {
+        width: 360px;
+        height: 590px;
+        background-size: 200%;
+    }
 }
 @media screen and (min-width: 20px) and (max-width: 400px) {
     .enjoy-section {
         max-width: 348px;
     }
-    .favorite-img {
-
+    .foto-coffee-girl {
+        width: 348px;
+        height: 590px;
+        background-size: 208%;
+    }
+    .foto-happy-couple {
+        width: 348px;
+        height: 590px;
+        background-size: 208%;
     }
 }
