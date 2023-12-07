@@ -709,7 +709,7 @@ html {
         display: none;
     }
     .footer-wrapper-column {
-        max-width: 530px;
+        max-width: 430px;
     }
 }
 @media screen and (min-width: 360px) and (max-width: 767px) {
