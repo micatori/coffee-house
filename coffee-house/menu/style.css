@@ -547,7 +547,7 @@ html {
 }
 @media screen and (max-width: 600px) {
     .footer-wrapper-column {
-        max-width: 530px;
+        max-width: 430px;
     }
     .buttons-wrapper {
         gap: 8px;
@@ -561,6 +561,7 @@ html {
         flex-direction: column;
         align-content: center;
     }
+    .footer-title,
     .main-title {
         max-width: 500px;
     }
@@ -589,10 +590,17 @@ html {
     .footer-title {
         font-size: 32px;
     }
+    .footer-title,
+    .main-title {
+        max-width: 400px;
+    }
 }
 @media screen and (max-width: 500px) {
     .footer-wrapper-column {
         max-width: 316px;
+    }
+    .main-title {
+        max-width: 348px;
     }
 }
 @media screen and (min-width: 20px) and (max-width: 400px) {
