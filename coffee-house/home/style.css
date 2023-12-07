@@ -758,7 +758,7 @@ html {
     .about-background {
         padding: 0 16px;
     }
-    .foto-coffee-girl {
+    /* .foto-coffee-girl {
         width: 500px;
         height: 590px;
         background-size: 150%;
@@ -767,10 +767,23 @@ html {
         width: 500px;
         height: 590px;
         background-size: 150%;
+    } */
+    .foto-coffee-girl {
+        width: 360px;
+        height: 590px;
+        background-size: 200%;
+    }
+    .foto-happy-couple {
+        width: 360px;
+        height: 590px;
+        background-size: 200%;
     }
     /* MOBILE APP */
     .mobile-app-background {
         padding: 0 16px;
+    }
+    .mobile-app-section {
+        width: 400px;
     }
     .mobile-app-image {
         width: 100%;
