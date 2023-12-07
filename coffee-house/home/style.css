@@ -618,7 +618,7 @@ html {
     font-weight: 600;
     line-height: 150%; /* 24px */
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1438px) {
     .enjoy-section {
         padding: 100px 130px 100px 60px;
     }
@@ -697,11 +697,12 @@ html {
         z-index: 0;
         opacity: 1;
     }
-    .mobile-app-section {
+    /* .mobile-app-section {
         max-width: 630px;
-    }
+    } */
     .mobile-app-image {
-        margin-top: 37px;
+        /* margin-top: 37px; */
+        margin-top: 100px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -829,5 +830,8 @@ html {
     }
     .wrapper-footer-links {
         gap: 18px;
+    }
+    .mobile-app-image {
+        margin-top: 37px;
     }
 }
