@@ -107,12 +107,12 @@ html {
     pointer-events: none;
     cursor: default;
 }
-.nav-item:hover:after,
+/* .nav-item:hover:after,
 .nav-item:focus:after,
 .menu-link:hover:after,
 .menu-link:focus:after {
     width: 100%;
-}
+} */
 .menu-link-wrapper {
     display: flex;
     margin-top: 15px;
@@ -176,12 +176,12 @@ html {
     cursor: pointer;
     transition: all 0.5s;
 }
-.button-color-inactive:hover {
+/* .button-color-inactive:hover {
     background: var(--background-container);
     border-style: none;
     cursor: pointer;
     transition: all 0.5s;
-}
+} */
 .button-image-wrapper {
     display: flex;
     width: 30px;
@@ -200,11 +200,11 @@ html {
     cursor: pointer;
     transition: all 0.5s;
 }
-.button-color-inactive:hover .button-image-wrapper-color-inactive {
+/* .button-color-inactive:hover .button-image-wrapper-color-inactive {
     background: var(--background-body);
     cursor: pointer;
     transition: all 0.5s;
-}
+} */
 .button-text {
     color: var(--text-light);
     font-family: 'Inter';
@@ -218,11 +218,11 @@ html {
     cursor: pointer;
     transition: all 0.5s;
 }
-.button-color-inactive:hover .button-text-color-inactive {
+/* .button-color-inactive:hover .button-text-color-inactive {
     color: var(--text-light);
     cursor: pointer;
     transition: all 0.5s;
-}
+} */
 .main-menu {
     display: flex;
     flex-direction: row;
@@ -247,14 +247,14 @@ html {
     height: 505px;
     padding-bottom: 20px;
 }
-.coffee-description:hover {
+/* .coffee-description:hover {
     cursor: pointer;
 }
 .coffee-description:hover .image-background {
     transition: all 0.5s;
     cursor: pointer;
     background-size: 100%;
-}
+} */
 .wrapper-coffee-article {
     display: flex;
     flex-direction: column;
@@ -413,7 +413,7 @@ html {
     cursor: pointer;
     transition: all 1s;
 }
-.button-social:hover {
+/* .button-social:hover {
     background-color: var(--background-body);
     cursor: pointer;
     transition: all 1s;
@@ -422,7 +422,7 @@ html {
     stroke: var(--text-dark);
     cursor: pointer;
     transition: all 1s;
-}
+} */
 
 /* Second footer column */
 .section-title-accent {
@@ -465,10 +465,10 @@ html {
     background: var(--background-body);
     transition: all 0.5s ease-in-out;
 }
-.footer-link-container:hover:after,
+/* .footer-link-container:hover:after,
 .footer-link-container:focus:after {
     width: 100%;
-}
+} */
 .footer-link-wrapper-line,
 .footer-link-container-hours {
     display: flex;
@@ -615,5 +615,51 @@ html {
     }
     .wrapper-footer-links {
         gap: 16px;
+    }
+}
+@media (hover: hover) {
+    .nav-item:hover:after,
+    .nav-item:focus:after,
+    .menu-link:hover:after,
+    .menu-link:focus:after {
+        width: 100%;
+    }
+    .button-color-inactive:hover {
+        background: var(--background-container);
+        border-style: none;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    .button-color-inactive:hover .button-image-wrapper-color-inactive {
+        background: var(--background-body);
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    .button-color-inactive:hover .button-text-color-inactive {
+        color: var(--text-light);
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    .coffee-description:hover {
+        cursor: pointer;
+    }
+    .coffee-description:hover .image-background {
+        transition: all 0.5s;
+        cursor: pointer;
+        background-size: 100%;
+    }
+    .button-social:hover {
+        background-color: var(--background-body);
+        cursor: pointer;
+        transition: all 1s;
+    }
+    .button-social:hover .button-social-svg > path {
+        stroke: var(--text-dark);
+        cursor: pointer;
+        transition: all 1s;
+    }
+    .footer-link-container:hover:after,
+    .footer-link-container:focus:after {
+        width: 100%;
     }
 }

@@ -99,12 +99,12 @@ html {
     background: var(--text-dark);
     transition: all 0.5s ease-in-out;
 }
-.nav-item:hover:after,
+/* .nav-item:hover:after,
 .nav-item:focus:after,
 .menu-link:hover:after,
 .menu-link:focus:after {
     width: 100%;
-}
+} */
 .menu-link-wrapper {
     display: flex;
     margin-top: 15px;
@@ -196,7 +196,7 @@ html {
     opacity: 0.7;
     transition: all 0.5s ease-in-out;
 }
-.button:hover .enjoy-button-text {
+/* .button:hover .enjoy-button-text {
     margin-left: 0;
     transition: all 0.5s ease-in-out;
 }
@@ -204,7 +204,7 @@ html {
     z-index: 0;
     opacity: 1;
     transition: all 0.5s ease-in-out;
-}
+} */
 /* FAVORITE */
 .favorite-background {
     padding: 0 40px;
@@ -244,20 +244,20 @@ html {
     fill: var(--background-body);
     transition: fill 1s;
 }
-.btn-arrow:hover {
+/* .btn-arrow:hover {
     cursor: pointer;
     fill: var(--background-container);
     transition: fill 1s;
-}
+} */
 
 .color-of-arrow {
     stroke: var(--text-dark);
     transition: stroke 1s;
 }
-.btn-arrow:hover .color-of-arrow {
+/* .btn-arrow:hover .color-of-arrow {
     stroke: var(--background-body);
     transition: stroke 1s;
-}
+} */
 .coffee-description {
     display: flex;
     flex-direction: column;
@@ -392,14 +392,14 @@ html {
     cursor: pointer;
     transition: all 1s;
 }
-.foto-coffee-girl:hover,
+/* .foto-coffee-girl:hover,
 .foto-cup-with-lights:hover,
 .foto-coffee-boy:hover,
 .foto-happy-couple:hover {
     cursor: pointer;
     background-size: 100%;
     transition: all 1s;
-}
+} */
 /* MOBILE APP */
 .mobile-app-background {
     padding: 0 40px;
@@ -453,7 +453,7 @@ html {
     cursor: pointer;
     transition: all 1s;
 }
-.button-app:hover {
+/* .button-app:hover {
     cursor: pointer;
     background-color: var(--border-dark);
     transition: all 1s;
@@ -467,7 +467,7 @@ html {
     color: var(--background-body);
     cursor: pointer;
     transition: all 1s;
-}
+} */
 .mobile-app-description {
     display: flex;
     flex-direction: column;
@@ -478,11 +478,11 @@ html {
     cursor: pointer;
     transition: all 1s;
 }
-.button-app:hover .img-mobile-app > path {
+/* .button-app:hover .img-mobile-app > path {
     cursor: pointer;
     transition: all 1s;
     fill: var(--background-body);
-}
+} */
 .mobile-app-p {
     color: var(--text-dark);
     text-align: center;
@@ -550,7 +550,7 @@ html {
     cursor: pointer;
     transition: all 1s;
 }
-.button-social:hover {
+/* .button-social:hover {
     background-color: var(--background-body);
     cursor: pointer;
     transition: all 1s;
@@ -559,7 +559,7 @@ html {
     stroke: var(--text-dark);
     cursor: pointer;
     transition: all 1s;
-}
+} */
 
 /* Second footer column */
 .footer-title-h3 {
@@ -598,10 +598,10 @@ html {
     background: var(--background-body);
     transition: all 0.5s ease-in-out;
 }
-.footer-link-container:hover:after,
+/* .footer-link-container:hover:after,
 .footer-link-container:focus:after {
     width: 100%;
-}
+} */
 .footer-link-wrapper-line,
 .footer-link-container-hours {
     display: flex;
@@ -846,5 +846,74 @@ html {
     }
     .mobile-app-image {
         margin-top: 37px;
+    }
+}
+@media (hover: hover) {
+    /* @media (hover: hover) and (min-width: 900px) { */
+    .nav-item:hover:after,
+    .nav-item:focus:after,
+    .menu-link:hover:after,
+    .menu-link:focus:after {
+        width: 100%;
+    }
+    .button:hover .enjoy-button-text {
+        margin-left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .button:hover .menu-img-button {
+        z-index: 0;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+    .btn-arrow:hover {
+        cursor: pointer;
+        fill: var(--background-container);
+        transition: fill 1s;
+    }
+    .btn-arrow:hover .color-of-arrow {
+        stroke: var(--background-body);
+        transition: stroke 1s;
+    }
+    .foto-coffee-girl:hover,
+    .foto-cup-with-lights:hover,
+    .foto-coffee-boy:hover,
+    .foto-happy-couple:hover {
+        cursor: pointer;
+        background-size: 100%;
+        transition: all 1s;
+    }
+    .button-app:hover {
+        cursor: pointer;
+        background-color: var(--border-dark);
+        transition: all 1s;
+    }
+    .button-app:hover .mobile-app-p {
+        color: var(--background-body);
+        cursor: pointer;
+        transition: all 1s;
+    }
+    .button-app:hover .mobole-app-title {
+        color: var(--background-body);
+        cursor: pointer;
+        transition: all 1s;
+    }
+    .button-app:hover .img-mobile-app > path {
+        cursor: pointer;
+        transition: all 1s;
+        fill: var(--background-body);
+    }
+    .button-social:hover {
+        background-color: var(--background-body);
+        cursor: pointer;
+        transition: all 1s;
+    }
+    .button-social:hover .button-social-svg > path {
+        stroke: var(--text-dark);
+        cursor: pointer;
+        transition: all 1s;
+    }
+    .footer-link-container:hover:after,
+    .footer-link-container:focus:after {
+        width: 100%;
     }
 }
