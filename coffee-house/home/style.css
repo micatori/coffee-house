@@ -684,6 +684,9 @@ html {
         width: 686px;
         background-size: 105%;
     }
+    .enjoy-section {
+        max-width: 720px;
+    }
     .enjoy-wrapper {
         max-height: 644px;
     }
@@ -695,8 +698,10 @@ html {
         opacity: 1;
     }
 }
-@media screen and (max-width: 769px) {
-
+@media screen and (max-width: 600px) {
+    .btn-arrow {
+        display: none;
+    }
 }
 @media screen and (min-width: 379px) and (max-width: 767px) {
 /* от 380 до 767 */
@@ -710,7 +715,7 @@ html {
         max-height: 552px;
     }
     .enjoy-section {
-        max-width: 720px;
+        max-width: 80%;
         padding: 60px 16px;
     }
     .enjoy-title,
@@ -725,10 +730,26 @@ html {
         z-index: 0;
         opacity: 1;
     }
-
+    /* FAVORITE */
+    .favorite-background {
+        padding: 0 16px;
+        margin-bottom: 100px;
+    }
+    .section-title,
+    .section-title-accent {
+        font-size: 32px;
+        line-height: 125%; /* 40px */
+    }
+    .favorite-img {
+        height: 100%;
+        width: 100%;
+    }
 }
 @media screen and (min-width: 20px) and (max-width: 400px) {
     .enjoy-section {
         max-width: 348px;
+    }
+    .favorite-img {
+
     }
 }
