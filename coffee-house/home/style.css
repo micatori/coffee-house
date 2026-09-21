@@ -122,6 +122,7 @@ html {
     padding: 4px;
     width: 88px;
     height: 44px;
+    transition: 0.5s;
 }
 .mode__wrapper:hover {
     cursor: pointer;
@@ -143,6 +144,7 @@ html {
     border-radius: 100px;
     background-color: var(--background-body);
     margin-left: 8px;
+    transition: 0.5s;
 }
 .moon__box:hover {
     cursor: pointer;
