@@ -123,12 +123,18 @@ html {
     width: 88px;
     height: 44px;
 }
+.mode__wrapper:hover {
+    cursor: pointer;
+}
 .sun__box {
     display: flex;
     width: 36px;
     height: 36px;
     border-radius: 100px;
     background-color: var(--text-accent);
+}
+.sun__box:hover {
+    /* cursor: pointer; */
 }
 .moon__box {
     display: flex;
@@ -138,10 +144,23 @@ html {
     background-color: var(--background-body);
     margin-left: 8px;
 }
+.moon__box:hover {
+    cursor: pointer;
+    background-color: var(--background-container);
+    transition: 0.5s;
+    .moon-icon {
+        transition: 0.5s;
+        color: var(--text-light);
+    }
+}
 .moon-icon, .sun-icon {
     margin: auto;
     align-self: center;
 }
+.moon-icon {
+    color: #403F3D;
+}
+
 .menu-link-wrapper {
     display: flex;
     margin-top: 15px;
