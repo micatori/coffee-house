@@ -36,7 +36,7 @@
 	--background-container: #403f3d;
 	--background-overlay: rgba(41, 40, 38, 0.8);
 	--border-primary: #665f55;
-	--dark-border-inverse: #c1b6ad;
+	--border-inverse: #c1b6ad;
     /* modal */
 	--background-modal: var(--background-container);
 	--background-modal-control: var(--background-page);
