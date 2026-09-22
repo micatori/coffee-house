@@ -614,6 +614,18 @@ html {
         max-width: 800px;
     }
 }
+@media screen and (min-width: 769px) and (max-width: 909px) {
+    .nav {
+        flex: 1;
+    }
+    .nav-list {
+        flex: 1;
+        justify-content: space-between;
+    }
+    .nav-item {
+        margin-right: 0;
+    }
+}
 @media screen and (max-width: 900px) {
     .main-title {
         max-width: 688px;
@@ -623,7 +635,9 @@ html {
     }
 }
 @media screen and (max-width: 800px) {
-    /* от 801 и выше */
+    /* от 801 и ниже */
+}
+@media screen and (max-width: 768px) {
     .nav {
         display: none;
     }

@@ -760,21 +760,20 @@ html {
         margin-bottom: 65px;
     }
 }
-@media screen and (max-width: 800px) {
-    /* от 801 и выше */
+@media screen and (min-width: 769px) and (max-width: 909px) {
     .nav {
-        display: none;
+        flex: 1;
     }
-    .menu-link {
-        display: none;
+    .nav-list {
+        flex: 1;
+        justify-content: space-between;
     }
-    .burger-button {
-        display: flex;
-        width: 44px;
-        height: 44px;
-        justify-content: center;
-        align-self: center;
+    .nav-item {
+        margin-right: 0;
     }
+}
+@media screen and (max-width: 800px) {
+    /* от 800 и ниже */
     .foto-cup-with-lights {
         display: none;
     }
@@ -808,6 +807,21 @@ html {
     .mobile-app-image {
         /* margin-top: 37px; */
         margin-top: 100px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+    .menu-link {
+        display: none;
+    }
+    .burger-button {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        justify-content: center;
+        align-self: center;
     }
 }
 @media screen and (max-width: 600px) {
