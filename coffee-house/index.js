@@ -25,6 +25,6 @@ const savedTheme = localStorage.getItem('theme') || 'light';
 setTheme(savedTheme);
 
 modeToggle.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.contains('darl-mode');
+    const isDark = document.documentElement.classList.contains('dark-mode');
     setTheme(isDark ? 'light' : 'dark');
 });
