@@ -29,13 +29,13 @@
     /* --text-primary: #403f3d;  - ? */
     /* dark */
     --white-color: #ffffff;
-	--dark-text-primary: #e1d4c9;
-	--dark-text-inverse: #e1d4c9;
-	--dark-text-accent: #b0907a;
+	--text-primary: #e1d4c9;
+	--text-inverse: #e1d4c9;
+	--text-accent: #b0907a;
 	--background-page: #292826;
 	--background-container: #403f3d;
 	--background-overlay: rgba(41, 40, 38, 0.8);
-	--dark-border-primary: #665f55;
+	--border-primary: #665f55;
 	--dark-border-inverse: #c1b6ad;
     /* modal */
 	--background-modal: var(--background-container);
@@ -199,6 +199,9 @@ html {
         transition: 0.5s;
         color: var(--text-inverse);
     }
+}
+.moon__box_dark {
+    background-color: var(--text-accent);
 }
 .moon-icon, .sun-icon {
     margin: auto;

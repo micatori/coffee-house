@@ -204,7 +204,7 @@ html {
     color: var(--text-primary);
 }
 .moon-icon_dark {
-    color: var(--text-inverse);
+    color: var(--text-accent);
 }
 .menu-link-wrapper {
     display: flex;
