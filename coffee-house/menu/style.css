@@ -20,6 +20,9 @@
     --background-container: #665F55;
     --border-dark: #665F55;
     --border-light: #C1B6AD;
+    /* mode */
+    --border-primary: #C1B6AD;
+    --border-inverse: #665F55;
 }
 
 * {
@@ -113,6 +116,60 @@ html {
 .menu-link:focus:after {
     width: 100%;
 } */
+.navigation__wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.mode__wrapper {
+    display: flex;
+    margin-right: 24px;
+    background-color: var(--background-body);
+    align-self: center;
+    border: 1px solid var(--border-primary);
+    border-radius: 100px;
+    padding: 4px;
+    width: 88px;
+    height: 44px;
+    transition: 0.5s;
+}
+.mode__wrapper:hover {
+    cursor: pointer;
+}
+.sun__box {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    background-color: var(--text-accent);
+}
+.sun__box:hover {
+    /* cursor: pointer; */
+}
+.moon__box {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    background-color: var(--background-body);
+    margin-left: 8px;
+    transition: 0.5s;
+}
+.moon__box:hover {
+    cursor: pointer;
+    background-color: var(--background-container);
+    transition: 0.5s;
+    .moon-icon {
+        transition: 0.5s;
+        color: var(--text-light);
+    }
+}
+.moon-icon, .sun-icon {
+    margin: auto;
+    align-self: center;
+}
+.moon-icon {
+    color: #403F3D;
+}
 .menu-link-wrapper {
     display: flex;
     margin-top: 15px;
