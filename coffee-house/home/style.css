@@ -39,18 +39,6 @@
 	--background-modal: var(--background-container);
 	--background-modal-control: var(--background-page);
 }
-.logo-dark {
-  display: none;
-}
-.dark-mode {
-  .logo-light {
-    display: none;
-  }
-
-  .logo-dark {
-    display: block;
-  }
-}
 
 * {
     box-sizing: border-box;
@@ -81,7 +69,17 @@ html {
 }
 
 /* HEADER */
-
+.logo-dark {
+  display: none;
+}
+.dark-mode {
+  .logo-light {
+    display: none;
+  }
+  .logo-dark {
+    display: block;
+  }
+}
 .header-wrapper {
     display: flex;
     flex-direction: row;
