@@ -23,6 +23,8 @@
     /* mode */
     --border-primary: #C1B6AD;
     --border-inverse: #665F55;
+    --dark-bg-page: #292826;
+    --dark-bg-container: #403F3D;
 }
 
 * {
@@ -117,9 +119,7 @@ html {
 .mode__wrapper {
     display: flex;
     margin-right: 24px;
-    background-color: var(--background-body);
     align-self: center;
-    border: 1px solid var(--border-primary);
     border-radius: 100px;
     padding: 4px;
     width: 88px;
@@ -129,15 +129,39 @@ html {
 .mode__wrapper:hover {
     cursor: pointer;
 }
+.mode__wrapper_light {
+    background-color: var(--background-body);
+    border: 1px solid var(--border-primary);
+}
+.mode__wrapper_dark {
+    background-color: var(--dark-bg-page);
+    border: 1px solid var(--border-inverse);
+}
+.mode__wrapper_dark:hover {
+    cursor: pointer;
+}
 .sun__box {
     display: flex;
     width: 36px;
     height: 36px;
     border-radius: 100px;
     background-color: var(--text-accent);
+    transition: 0.5s;
 }
 .sun__box:hover {
+    transition: 0.5s;
     /* cursor: pointer; */
+}
+.sun__box_light {
+    background-color: var(--text-accent);
+}
+.sun__box_dark {
+    transition: 0.5s;
+    background-color: var(--dark-bg-page);
+}
+.sun__box_dark:hover {
+    transition: 0.5s;
+    background-color: var(--dark-bg-container);
 }
 .moon__box {
     display: flex;
@@ -148,7 +172,7 @@ html {
     margin-left: 8px;
     transition: 0.5s;
 }
-.moon__box:hover {
+.moon__box_light:hover {
     cursor: pointer;
     background-color: var(--background-container);
     transition: 0.5s;
@@ -161,8 +185,11 @@ html {
     margin: auto;
     align-self: center;
 }
-.moon-icon {
+.moon-icon_light {
     color: #403F3D;
+}
+.moon-icon_dark {
+    color: var(--text-light);
 }
 .menu-link-wrapper {
     display: flex;
