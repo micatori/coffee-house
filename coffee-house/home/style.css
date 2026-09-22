@@ -108,10 +108,10 @@ html {
 .menu-link:focus:after {
     width: 100%;
 } */
- .navigation__wrapper {
+.navigation__wrapper {
     display: flex;
     flex-direction: row;
- }
+}
 .mode__wrapper {
     display: flex;
     margin-right: 24px;
