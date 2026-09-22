@@ -42,18 +42,6 @@
 	--background-modal-control: var(--background-page);
 }
 
-.logo-dark {
-  display: none;
-}
-.dark-mode {
-  .logo-light {
-    display: none;
-  }
-  .logo-dark {
-    display: block;
-  }
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -83,6 +71,18 @@ html {
 }
 
 /* HEADER */
+.logo-dark {
+  display: none;
+}
+.dark-mode {
+  .logo-light {
+    display: none;
+  }
+  .logo-dark {
+    display: block;
+  }
+}
+
 .h1-title {
     display: none;
 }
