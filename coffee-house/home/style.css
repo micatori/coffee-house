@@ -12,7 +12,6 @@
 }
 
 :root {
-    --white-color: #ffffff;
 	--text-primary: #403f3d;
 	--text-inverse: #e1d4c9;
 	--text-accent: #b0907a;
@@ -21,14 +20,12 @@
 	--background-overlay: rgba(64, 63, 61, 0.8);
 	--border-primary: #c1b6ad;
 	--border-inverse: #665f55;
+    --white-color: #ffffff;
     /* modal */
     --background-modal: #e1d4c9;
 	--background-modalcontrol: #665f55;
 }
 .dark-mode {
-    /* --text-primary: #403f3d;  - ? */
-    /* dark */
-    --white-color: #ffffff;
 	--text-primary: #e1d4c9;
 	--text-inverse: #e1d4c9;
 	--text-accent: #b0907a;
@@ -37,9 +34,22 @@
 	--background-overlay: rgba(41, 40, 38, 0.8);
 	--border-primary: #665f55;
 	--border-inverse: #c1b6ad;
+    --white-color: #ffffff;
     /* modal */
 	--background-modal: var(--background-container);
 	--background-modal-control: var(--background-page);
+}
+.logo-dark {
+  display: none;
+}
+.dark-mode {
+  .logo-light {
+    display: none;
+  }
+
+  .logo-dark {
+    display: block;
+  }
 }
 
 * {
@@ -71,6 +81,7 @@ html {
 }
 
 /* HEADER */
+
 .header-wrapper {
     display: flex;
     flex-direction: row;
