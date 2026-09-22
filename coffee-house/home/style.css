@@ -13,18 +13,31 @@
 
 :root {
     --white-color: #ffffff;
-    --text-dark: #403F3D;
-    --text-accent: #B0907A;
-    --text-light: #E1D4C9;
-    --background-body: #E1D4C9;
-    --background-container: #665F55;
-    --border-dark: #665F55;
-    --border-light: #C1B6AD;
-    /* mode */
-    --border-primary: #C1B6AD;
-    --border-inverse: #665F55;
-    --dark-bg-page: #292826;
-    --dark-bg-container: #403F3D;
+	--text-primary: #403f3d;
+	--text-inverse: #e1d4c9;
+	--text-accent: #b0907a;
+	--background-page: #e1d4c9;
+	--background-container: #665f55;
+	--background-overlay: rgba(64, 63, 61, 0.8);
+	--border-primary: #c1b6ad;
+	--border-inverse: #665f55;
+}
+.dark-mode {
+    /* --text-primary: #403f3d;  - ? */
+    /* dark */
+    --white-color: #ffffff;
+	--dark-text-primary: #e1d4c9;
+	--dark-text-inverse: #e1d4c9;
+	--dark-text-accent: #b0907a;
+	--dark-bg-page: #292826;
+	--dark-bg-container: #403f3d;
+	--dark-bg-overlay: rgba(41, 40, 38, 0.8);
+	--dark-border-primary: #665f55;
+	--dark-border-inverse: #c1b6ad;
+	--background-modal: #e1d4c9;
+	--background-modalcontrol: #665f55;
+	--dark-bg-modal: var(--dark-bg-container);
+	--dark-bg-modal-control: var(--dark-bg-page);
 }
 
 * {
@@ -46,7 +59,7 @@ body {
 
 body,
 html {
-    background: var(--background-body);
+    background: var(--background-page);
     height: 100%;
 }
 
@@ -89,7 +102,7 @@ html {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    color: var(--text-dark);
+    color: var(--text-primary);
     text-decoration: none;
     transition: 0.1s;
 }
@@ -101,7 +114,7 @@ html {
     content: "";
     width: 0%;
     height: 2px;
-    background: var(--text-dark);
+    background: var(--text-primary);
     transition: all 0.5s ease-in-out;
 }
 /* .nav-item:hover:after,
@@ -125,7 +138,7 @@ html {
     transition: 0.5s;
 }
 .mode__wrapper_light {
-    background-color: var(--background-body);
+    background-color: var(--background-page);
     border: 1px solid var(--border-primary);
 }
 .mode__wrapper:hover {
@@ -172,7 +185,7 @@ html {
     width: 36px;
     height: 36px;
     border-radius: 100px;
-    background-color: var(--background-body);
+    background-color: var(--background-page);
     margin-left: 8px;
     transition: 0.5s;
 }
@@ -182,18 +195,18 @@ html {
     transition: 0.5s;
     .moon-icon {
         transition: 0.5s;
-        color: var(--text-light);
+        color: var(--text-inverse);
     }
 }
 .moon-icon, .sun-icon {
     margin: auto;
     align-self: center;
 }
-.moon-icon_light {
+.moon-icon {
     color: #403F3D;
 }
 .moon-icon_dark {
-    color: var(--text-light);
+    color: var(--text-inverse);
 }
 .menu-link-wrapper {
     display: flex;
@@ -235,7 +248,7 @@ html {
     gap: 40px;
 }
 .enjoy-title {
-    color: var(--text-light);
+    color: var(--text-inverse);
     font-family: 'Inter';
     font-size: 72px;
     font-style: normal;
@@ -247,7 +260,7 @@ html {
     font-style: italic;
 }
 .enjoy-text {
-    color: var(--text-light);
+    color: var(--text-inverse);
     font-family: 'Inter';
     font-size: 16px;
     font-style: normal;
@@ -262,7 +275,7 @@ html {
     height: 64px;
     padding: 20px 78px;
     gap: 8px;
-    background: var(--background-body);
+    background: var(--background-page);
     border-radius: 100px;
     text-decoration: none;
     transition: all 0.5s ease-in-out;
@@ -270,7 +283,7 @@ html {
 }
 
 .enjoy-button-text {
-    color: var(--text-dark);
+    color: var(--text-primary);
     text-align: center;
     font-family: 'Inter';
     font-size: 16px;
@@ -306,7 +319,7 @@ html {
     justify-content: space-between;
 }
 .section-title {
-    color: var(--text-dark);
+    color: var(--text-primary);
     text-align: center;
     font-family: 'Inter';
     font-size: 60px;
@@ -331,7 +344,7 @@ html {
 .btn-arrow {
     margin-top: 330px;
     cursor: pointer;
-    fill: var(--background-body);
+    fill: var(--background-page);
     transition: fill 1s;
 }
 /* .btn-arrow:hover {
@@ -341,11 +354,11 @@ html {
 } */
 
 .color-of-arrow {
-    stroke: var(--text-dark);
+    stroke: var(--text-primary);
     transition: stroke 1s;
 }
 /* .btn-arrow:hover .color-of-arrow {
-    stroke: var(--background-body);
+    stroke: var(--background-page);
     transition: stroke 1s;
 } */
 .coffee-description {
@@ -358,7 +371,7 @@ html {
     max-width: 480px;
 }
 .coffee-description-title {
-    color: var(--text-dark);
+    color: var(--text-primary);
     text-align: center;
     font-family: 'Inter';
     font-size: 24px;
@@ -367,7 +380,7 @@ html {
     line-height: 125%; /* 30px */
 }
 .coffee-description-text {
-    color: var(--text-dark);
+    color: var(--text-primary);
     text-align: center;
     font-family: 'Inter';
     font-size: 16px;
@@ -376,7 +389,7 @@ html {
     line-height: 150%; /* 24px */
 }
 .coffee-description-price {
-    color: var(--text-dark);
+    color: var(--text-primary);
     text-align: center;
     font-family: 'Inter';
     font-size: 24px;
@@ -395,10 +408,10 @@ html {
     width: 40px;
     height: 4px;
     border-radius: 100px;
-    background: var(--border-light);
+    background: var(--border-primary);
 }
 .bar-active {
-    background: var(--border-dark);
+    background: var(--border-inverse);
 }
 
 /* ABOUT */
@@ -513,7 +526,7 @@ html {
     text-align: start;
 }
 .mobile-app-text {
-    color: var(--text-dark);
+    color: var(--text-primary);
     text-align: start;
     font-family: 'Inter';
     font-size: 16px;
@@ -539,22 +552,22 @@ html {
     align-items: center;
     gap: 8px;
     border-radius: 100px;
-    border: 1px solid var(--border-dark);
+    border: 1px solid var(--border-inverse);
     cursor: pointer;
     transition: all 1s;
 }
 /* .button-app:hover {
     cursor: pointer;
-    background-color: var(--border-dark);
+    background-color: var(--border-inverse);
     transition: all 1s;
 }
 .button-app:hover .mobile-app-p {
-    color: var(--background-body);
+    color: var(--background-page);
     cursor: pointer;
     transition: all 1s;
 }
 .button-app:hover .mobole-app-title {
-    color: var(--background-body);
+    color: var(--background-page);
     cursor: pointer;
     transition: all 1s;
 } */
@@ -564,17 +577,17 @@ html {
     gap: 2px;
 }
 .img-mobile-app > path {
-    fill: var(--text-dark);
+    fill: var(--text-primary);
     cursor: pointer;
     transition: all 1s;
 }
 /* .button-app:hover .img-mobile-app > path {
     cursor: pointer;
     transition: all 1s;
-    fill: var(--background-body);
+    fill: var(--background-page);
 } */
 .mobile-app-p {
-    color: var(--text-dark);
+    color: var(--text-primary);
     text-align: center;
     font-family: 'Inter';
     font-size: 10px;
@@ -584,7 +597,7 @@ html {
     text-align: start;
 }
 .mobole-app-title {
-    color: var(--text-dark);
+    color: var(--text-primary);
     font-family: 'Inter';
     font-size: 16px;
     font-style: normal;
@@ -610,7 +623,7 @@ html {
     width: 530px;
 }
 .footer-title {
-    color: var(--text-light);
+    color: var(--text-inverse);
     font-family: 'Inter';
     font-size: 60px;
     font-style: normal;
@@ -630,23 +643,23 @@ html {
     justify-content: center;
     align-items: center;
     border-radius: 100px;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-primary);
     background: var(--background-container);
     cursor: pointer;
     transition: all 1s;
 }
 .button-social-svg > path {
-    stroke: var(--background-body);
+    stroke: var(--background-page);
     cursor: pointer;
     transition: all 1s;
 }
 /* .button-social:hover {
-    background-color: var(--background-body);
+    background-color: var(--background-page);
     cursor: pointer;
     transition: all 1s;
 }
 .button-social:hover .button-social-svg > path {
-    stroke: var(--text-dark);
+    stroke: var(--text-primary);
     cursor: pointer;
     transition: all 1s;
 } */
@@ -654,7 +667,7 @@ html {
 /* Second footer column */
 .footer-title-h3 {
     margin-top: 35px;
-    color: var(--text-light);
+    color: var(--text-inverse);
     font-family: 'Inter';
     font-size: 24px;
     font-style: normal;
@@ -685,7 +698,7 @@ html {
     content: "";
     width: 0%;
     height: 2px;
-    background: var(--background-body);
+    background: var(--background-page);
     transition: all 0.5s ease-in-out;
 }
 /* .footer-link-container:hover:after,
@@ -701,7 +714,7 @@ html {
     margin-bottom: 10px;
 }
 .footer-list-item-text {
-    color: var(--text-light);
+    color: var(--text-inverse);
     font-family: 'Inter';
     font-size: 16px;
     font-style: normal;
@@ -961,7 +974,7 @@ html {
         transition: fill 1s;
     }
     .btn-arrow:hover .color-of-arrow {
-        stroke: var(--background-body);
+        stroke: var(--background-page);
         transition: stroke 1s;
     }
     .foto-coffee-girl:hover,
@@ -974,31 +987,31 @@ html {
     }
     .button-app:hover {
         cursor: pointer;
-        background-color: var(--border-dark);
+        background-color: var(--border-inverse);
         transition: all 1s;
     }
     .button-app:hover .mobile-app-p {
-        color: var(--background-body);
+        color: var(--background-page);
         cursor: pointer;
         transition: all 1s;
     }
     .button-app:hover .mobole-app-title {
-        color: var(--background-body);
+        color: var(--background-page);
         cursor: pointer;
         transition: all 1s;
     }
     .button-app:hover .img-mobile-app > path {
         cursor: pointer;
         transition: all 1s;
-        fill: var(--background-body);
+        fill: var(--background-page);
     }
     .button-social:hover {
-        background-color: var(--background-body);
+        background-color: var(--background-page);
         cursor: pointer;
         transition: all 1s;
     }
     .button-social:hover .button-social-svg > path {
-        stroke: var(--text-dark);
+        stroke: var(--text-primary);
         cursor: pointer;
         transition: all 1s;
     }
