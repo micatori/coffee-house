@@ -110,12 +110,6 @@ html {
     pointer-events: none;
     cursor: default;
 }
-/* .nav-item:hover:after,
-.nav-item:focus:after,
-.menu-link:hover:after,
-.menu-link:focus:after {
-    width: 100%;
-} */
 .navigation__wrapper {
     display: flex;
     flex-direction: row;
