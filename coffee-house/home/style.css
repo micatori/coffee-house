@@ -21,6 +21,9 @@
 	--background-overlay: rgba(64, 63, 61, 0.8);
 	--border-primary: #c1b6ad;
 	--border-inverse: #665f55;
+    /* modal */
+    --background-modal: #e1d4c9;
+	--background-modalcontrol: #665f55;
 }
 .dark-mode {
     /* --text-primary: #403f3d;  - ? */
@@ -29,15 +32,14 @@
 	--dark-text-primary: #e1d4c9;
 	--dark-text-inverse: #e1d4c9;
 	--dark-text-accent: #b0907a;
-	--dark-bg-page: #292826;
-	--dark-bg-container: #403f3d;
-	--dark-bg-overlay: rgba(41, 40, 38, 0.8);
+	--background-page: #292826;
+	--background-container: #403f3d;
+	--background-overlay: rgba(41, 40, 38, 0.8);
 	--dark-border-primary: #665f55;
 	--dark-border-inverse: #c1b6ad;
-	--background-modal: #e1d4c9;
-	--background-modalcontrol: #665f55;
-	--dark-bg-modal: var(--dark-bg-container);
-	--dark-bg-modal-control: var(--dark-bg-page);
+    /* modal */
+	--background-modal: var(--background-container);
+	--background-modal-control: var(--background-page);
 }
 
 * {
@@ -147,7 +149,7 @@ html {
 .mode__wrapper_dark {
     display: flex;
     margin-right: 24px;
-    background-color: var(--dark-bg-page);
+    background-color: var(--background-page);
     align-self: center;
     border: 1px solid var(--border-inverse);
     border-radius: 100px;
@@ -175,10 +177,10 @@ html {
     /* cursor: pointer; */
 }
 .sun__box_dark {
-    background-color: var(--dark-bg-page);
+    background-color: var(--background-page);
 }
 .sun__box_dark:hover {
-    background-color: var(--dark-bg-container);
+    background-color: var(--background-container);
 }
 .moon__box {
     display: flex;
@@ -203,7 +205,7 @@ html {
     align-self: center;
 }
 .moon-icon {
-    color: #403F3D;
+    color: var(--text-primary);
 }
 .moon-icon_dark {
     color: var(--text-inverse);
