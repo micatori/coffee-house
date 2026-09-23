@@ -662,22 +662,10 @@ html {
     cursor: pointer;
     transition: all 1s;
 }
-.button-social-svg > path {
-    stroke: var(--background-page);
-    cursor: pointer;
-    transition: all 1s;
-}
-/* .button-social:hover {
-    background-color: var(--background-page);
-    cursor: pointer;
-    transition: all 1s;
-}
-.button-social:hover .button-social-svg > path {
-    stroke: var(--text-primary);
-    cursor: pointer;
-    transition: all 1s;
-} */
 
+.button-social-svg  {
+    color: var(--text-primary);
+}
 /* Second footer column */
 .footer-title-h3 {
     margin-top: 35px;
