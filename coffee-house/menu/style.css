@@ -232,6 +232,10 @@ html {
 .menu-img {
     margin-left: 8px;
 }
+/* SVG */
+.cup-menu-svg {
+    color: var(--text-primary);
+}
 .burger-button {
     display: none;
 }
