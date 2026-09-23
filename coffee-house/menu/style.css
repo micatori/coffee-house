@@ -195,7 +195,6 @@ html {
     width: 36px;
     height: 36px;
     border-radius: 100px;
-    /* background-color: var(--background-page); */
     margin-left: 8px;
     transition: 0.5s;
 }
@@ -255,8 +254,7 @@ html {
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
-    line-height: 125%; /* 75px */
-    /* margin-bottom: 40px; */
+    line-height: 125%;
     color: var(--text-primary);
     align-self: center;
 }
@@ -348,7 +346,6 @@ html {
 .coffee-description {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     border-radius: 40px;
     border: 1px solid var(--border-primary);
     max-width: 310px;
@@ -375,7 +372,7 @@ html {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 125%; /* 30px */
+    line-height: 125%;
     margin: 20px auto 10px 20px;
 }
 .coffee-description-text {
@@ -386,7 +383,7 @@ html {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 24px */
+    line-height: 150%;
     max-width: 270px;
 }
 .coffee-description-price {
@@ -399,7 +396,7 @@ html {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 125%; /* 30px */
+    line-height: 125%;
 }
 .prace-1-margin-top {
     margin-top: 15px;

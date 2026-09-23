@@ -250,7 +250,6 @@ html {
     background: url(../assets/img/enjoy.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-position-y: -30px; */
     background-position: center;
 }
 .enjoy-section {
@@ -279,7 +278,7 @@ html {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 24px */
+    line-height: 150%;
 }
 .button {
     display: flex;
@@ -303,7 +302,7 @@ html {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 150%; /* 24px */
+    line-height: 150%;
     margin-left: 30px;
     transition: all 0.5s ease-in-out;
 }
@@ -339,7 +338,7 @@ html {
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
-    line-height: 125%; /* 75px */
+    line-height: 125%;
 }
 .section-title-accent {
     color: var(--text-accent);
@@ -391,7 +390,7 @@ html {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 125%; /* 30px */
+    line-height: 125%;
 }
 .coffee-description-text {
     color: var(--text-primary);
@@ -400,7 +399,7 @@ html {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 24px */
+    line-height: 150%;
 }
 .coffee-description-price {
     color: var(--text-primary);
@@ -409,7 +408,7 @@ html {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 125%; /* 30px */
+    line-height: 125%;
 }
 .coffee-bar-wrapper {
     display: flex;
@@ -607,7 +606,7 @@ html {
     font-size: 10px;
     font-style: normal;
     font-weight: 600;
-    line-height: 140%; /* 14px */
+    line-height: 140%;
     text-align: start;
 }
 .mobole-app-title {
@@ -616,7 +615,7 @@ html {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 150%; /* 24px */
+    line-height: 150%;
     text-align: start;
 }
 /* FOOTER */
@@ -642,7 +641,7 @@ html {
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
-    line-height: 125%; /* 75px */
+    line-height: 125%;
     margin-bottom: 40px;
 }
 .cosial-wrapper {
@@ -674,7 +673,7 @@ html {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 125%; /* 30px */
+    line-height: 125%;
 }
 .wrapper-footer-links {
     display: flex;
@@ -721,7 +720,7 @@ html {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 150%; /* 24px */
+    line-height: 150%;
 }
 @media screen and (max-width: 1438px) {
     .enjoy-section {
@@ -805,7 +804,6 @@ html {
         max-width: 630px;
     } */
     .mobile-app-image {
-        /* margin-top: 37px; */
         margin-top: 100px;
     }
 }
@@ -850,7 +848,7 @@ html {
     .enjoy-title,
     .title-accent {
         font-size: 42px;
-        line-height: 115%; /* 48.3px */
+        line-height: 115%;
     }
     .enjoy-button-text {
         margin-left: 0;
@@ -867,7 +865,7 @@ html {
     .section-title,
     .section-title-accent {
         font-size: 32px;
-        line-height: 125%; /* 40px */
+        line-height: 125%;
     }
     .favorite-img {
         height: 100%;
