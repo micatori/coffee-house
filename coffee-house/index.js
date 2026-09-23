@@ -1,11 +1,9 @@
 // DARK__MODE
 const modeToggle = document.getElementById('mode-toggle');
-console.log(modeToggle);
 const modeWrapper = modeToggle;
 const sunBox = modeToggle.querySelector('.sun__box');
 const moonBox = modeToggle.querySelector('.moon__box');
 const moonIcon = modeToggle.querySelector('.moon-icon');
-console.log(moonIcon);
 function setTheme(theme) {
     const isDark = theme === 'dark';
     document.documentElement.classList.toggle('dark-mode', isDark);

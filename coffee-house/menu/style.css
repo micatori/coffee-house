@@ -26,7 +26,6 @@
 	--background-modalcontrol: #665f55;
 }
 .dark-mode {
-    /* --text-primary: #403f3d;  - ? */
     /* dark */
     --white-color: #ffffff;
 	--text-primary: #e1d4c9;
@@ -139,6 +138,7 @@ html {
     pointer-events: none;
     cursor: default;
 }
+
 .navigation__wrapper {
     display: flex;
     flex-direction: row;
@@ -513,21 +513,9 @@ html {
     cursor: pointer;
     transition: all 1s;
 }
-.button-social-svg > path {
-    stroke: var(--background-page);
-    cursor: pointer;
-    transition: all 1s;
+.button-social-svg  {
+    color: var(--text-primary);
 }
-/* .button-social:hover {
-    background-color: var(--background-page);
-    cursor: pointer;
-    transition: all 1s;
-}
-.button-social:hover .button-social-svg > path {
-    stroke: var(--text-primary);
-    cursor: pointer;
-    transition: all 1s;
-} */
 
 /* Second footer column */
 .section-title-accent {
@@ -593,6 +581,7 @@ html {
     font-weight: 600;
     line-height: 150%; /* 24px */
 }
+
 @media screen and (max-width: 1110px) {
     .menu-section {
         padding: 0px 14px;
