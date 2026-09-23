@@ -195,9 +195,12 @@ html {
     width: 36px;
     height: 36px;
     border-radius: 100px;
-    background-color: var(--background-page);
+    /* background-color: var(--background-page); */
     margin-left: 8px;
     transition: 0.5s;
+}
+.moon__box_dark {
+    background-color: var(--text-accent);
 }
 .moon__box_light:hover {
     cursor: pointer;
@@ -216,7 +219,7 @@ html {
     color: var(--text-primary);
 }
 .moon-icon_dark {
-    color: var(--text-accent);
+    color: var(--text-inverse);
 }
 .menu-link-wrapper {
     display: flex;
