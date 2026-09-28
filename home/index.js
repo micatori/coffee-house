@@ -1,6 +1,3 @@
-import products from '../products.json';
-console.log(products);
-
 // DARK__MODE
 const modeToggle = document.getElementById('mode-toggle');
 const modeWrapper = modeToggle;
