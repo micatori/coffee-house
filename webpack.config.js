@@ -6,8 +6,8 @@ module.exports = {
   mode: 'development',
 
   entry: {
-    home: ['./index.js', './home/style.css'],
-    menu: ['./index.js', './menu/style.css'],
+    home: ['../index.js', './home/style.css'],
+    menu: ['../index.js', './menu/style.css'],
   },
 
   output: {
