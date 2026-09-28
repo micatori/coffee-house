@@ -844,7 +844,7 @@ html {
         .burger-item1 {
             transform: translateY(5.25px) rotate(45deg);
         }
-    .burger-item2 {
+        .burger-item2 {
             transform: translateY(-5.25px) rotate(-45deg);
         }
     }
