@@ -31,3 +31,7 @@ modeToggle.addEventListener('click', () => {
 });
 
 // BURGER_MENU
+const burgerButton = document.getElementById('burger-button');
+burgerButton.addEventListener('click', () => {
+    burgerButton.classList.toggle('closed');
+})
