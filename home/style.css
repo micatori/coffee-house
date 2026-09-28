@@ -359,10 +359,12 @@ html {
     width: 480px;
 }
 .btn-arrow {
+    /* color: var(--background-page); */
     margin-top: 330px;
     cursor: pointer;
     fill: var(--background-page);
     transition: fill 1s;
+    /* color: var() */
 }
 /* .btn-arrow:hover {
     cursor: pointer;
@@ -993,6 +995,13 @@ html {
     }
     .btn-arrow:hover .color-of-arrow {
         stroke: var(--background-page);
+        color: var(--text-inverse);
+        transition: stroke 1s;
+    }
+
+    .dark-mode .btn-arrow:hover {
+        stroke: var(--background-page); /* don't change */
+        /* color: var(--text-inverse); */
         transition: stroke 1s;
     }
     .foto-coffee-girl:hover,
