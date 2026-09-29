@@ -32,7 +32,11 @@ const burgerButton = document.getElementById('burger-button');
 const nav = document.getElementById('nav');
 const navLinks = document.querySelectorAll('.nav-link');
 
-
+const closeMenu = () => {
+    burgerButton.classList.remove('closed');
+    nav.classList.remove('nav-open');
+    document.body.classList.remove('no-scroll');
+}
 
 burgerButton.addEventListener('click', () => {
     burgerButton.classList.toggle('closed');
@@ -42,22 +46,16 @@ burgerButton.addEventListener('click', () => {
 
 navLinks.forEach((link) => {
     link.addEventListener('click', () => {
-        burgerButton.classList.remove('closed');
-        nav.classList.remove('nav-open');
-        document.body.classList.remove('no-scroll');
+        closeMenu();
     });
 });
 window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
-        burgerButton.classList.remove('closed');
-        nav.classList.remove('nav-open');
-        document.body.classList.remove('no-scroll');
+        closeMenu();
     }
 });
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-        burgerButton.classList.remove('closed');
-        nav.classList.remove('nav-open');
-        document.body.classList.remove('no-scroll');
+        closeMenu();
     }
 });
