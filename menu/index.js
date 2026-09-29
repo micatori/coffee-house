@@ -776,3 +776,10 @@ window.addEventListener('resize', () => {
         document.body.classList.remove('no-scroll');
     }
 });
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        burgerButton.classList.remove('closed');
+        nav.classList.remove('nav-open');
+        document.body.classList.remove('no-scroll');
+    }
+});

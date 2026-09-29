@@ -32,6 +32,8 @@ const burgerButton = document.getElementById('burger-button');
 const nav = document.getElementById('nav');
 const navLinks = document.querySelectorAll('.nav-link');
 
+
+
 burgerButton.addEventListener('click', () => {
     burgerButton.classList.toggle('closed');
     nav.classList.toggle('nav-open');
@@ -47,6 +49,13 @@ navLinks.forEach((link) => {
 });
 window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
+        burgerButton.classList.remove('closed');
+        nav.classList.remove('nav-open');
+        document.body.classList.remove('no-scroll');
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
         burgerButton.classList.remove('closed');
         nav.classList.remove('nav-open');
         document.body.classList.remove('no-scroll');
