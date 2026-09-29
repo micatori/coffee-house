@@ -353,6 +353,10 @@ html {
     flex-direction: row;
     justify-content: space-between;
 }
+.slider {
+    display: flex;
+    flex-direction: row;
+}
 .favorite-carusel {
     display: flex;
     flex-direction: row;
