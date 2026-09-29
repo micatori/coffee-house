@@ -104,9 +104,10 @@ slider.append(firstSlide);
 slider.prepend(lastSlide);
 
 let currentSlide = 1;
+let isAnimating = false;
 
 const showSlide = (index, animate = true) => {
-    slider.style.transition = animate ? 'transform 0.5s ease' : 'none';
+    slider.style.transition = animate ? 'transform 0.3s ease' : 'none';
     slider.style.transform = `translateX(-${index * 100}%)`;
 }
 const updateBar = () => {
@@ -123,6 +124,9 @@ const updateBar = () => {
 };
 
 btnRight.addEventListener('click', () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
     currentSlide++;
     showSlide(currentSlide);
     updateBar();
@@ -137,9 +141,13 @@ slider.addEventListener('transitionend', () => {
         currentSlide = slideCount;
         showSlide(currentSlide, false);
     }
+    isAnimating = false;
 });
 
 btnLeft.addEventListener('click', () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
     currentSlide--;
     showSlide(currentSlide);
     updateBar();
