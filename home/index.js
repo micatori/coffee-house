@@ -105,6 +105,8 @@ slider.prepend(lastSlide);
 
 let currentSlide = 1;
 let isAnimating = false;
+let touchStartX = 0;
+let touchEndX = 0;
 
 const showSlide = (index, animate = true) => {
     slider.style.transition = animate ? 'transform 0.3s ease' : 'none';
@@ -149,6 +151,24 @@ btnLeft.addEventListener('click', () => {
     isAnimating = true;
 
     currentSlide--;
+    showSlide(currentSlide);
+    updateBar();
+});
+slider.addEventListener('touchstart', (event) => {
+    touchStartX = event.touches[0].clientX;
+});
+
+slider.addEventListener('touchend', (event) => {
+    touchEndX = event.changedTouches[0].clientX;
+    const swipeDistance = touchEndX - touchStartX;
+    if (Math.abs(swipeDistance) < 50) return;
+    if (isAnimating) return;
+    isAnimating = true;
+    if (swipeDistance < 0) {
+        currentSlide++;
+    } else {
+        currentSlide--;
+    }
     showSlide(currentSlide);
     updateBar();
 });
