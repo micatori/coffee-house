@@ -90,3 +90,32 @@ document.addEventListener('keydown', (event) => {
 });
 
 // SLIDER
+const slider = document.getElementById('slider');
+const sliderItems = document.querySelectorAll('.slider-item');
+const btnLeft = document.getElementById('btn-left');
+const btnRight = document.getElementById('btn-right');
+const bars = document.querySelectorAll('.coffee-bar');
+
+let currentSlide = 0;
+
+const showSlide = (index) => {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+    bars.forEach((bar, i) => {
+        bar.classList.toggle('bar-active', i === index);
+    });
+}
+btnRight.addEventListener('click', () => {
+    currentSlide++;
+    if (currentSlide >= sliderItems.length) {
+        currentSlide = 0;
+    }
+    showSlide(currentSlide);
+});
+btnLeft.addEventListener('click', () => {
+    currentSlide--;
+    if (currentSlide < 0) {
+        currentSlide = sliderItems.length - 1;
+    }
+    showSlide(currentSlide);
+});
+showSlide(currentSlide);
