@@ -848,6 +848,9 @@ window.onload = function() {
   if (products) {
     renderArticlesToDom();
   }
+  showOnlyCoffeeCards();
+  // Tags
+    addTagsClickHandler();
 }
 const generateArticles = (prod) => {
   let cards = [];
@@ -861,5 +864,36 @@ const renderArticlesToDom = () => {
   generateArticles(products).forEach(card => {
     let articleAnotherOne = card.generateProduct();
     menuSection.append(articleAnotherOne);
+  })
+}
+
+const addTagsClickHandler = () => {
+  document.querySelector('.buttons-wrapper').addEventListener('click', (event) => {
+    if (event.target.classList.contains('button')) {
+      let clickedBtn = event.target;
+      removeSelectedBtn();
+      selectClickBtn(clickedBtn);
+      if (clickedBtn) {
+
+      }
+    }
+  })
+}
+const removeSelectedBtn = () => {
+  let btn = document.querySelector('button-active');
+  btn.classList.remove('button-active');
+  btn.classList.add('button-inactive');
+}
+const selectClickBtn = (clickedBtn) => {
+  clickedBtn.classList.remove('button-inactive');
+  clickedBtn.classList.add('button-active');
+}
+const showOnlyCoffeeCards = () => {
+  let cards = document.querySelectorAll('.menu-section .coffee-description')
+  console.log(cards[0]);
+  cards.forEach((card, index) => {
+    if (index >= 8) {
+      card.classList.add('card_hidden');
+    }
   })
 }

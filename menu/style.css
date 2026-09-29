@@ -279,12 +279,17 @@ html {
     border-radius: 100px;
     background: var(--background-container);
     border-style: none;
+    cursor: pointer;
+    transition: all 0.5s;
 }
-.button-color-inactive {
+.button-inactive {
     border: 1px solid var(--border-primary);
     background-color: var(--background-page);
     cursor: pointer;
     transition: all 0.5s;
+}
+.button-active {
+    background: var(--background-container);
 }
 /* .button-color-inactive:hover {
     background: var(--background-container);
@@ -305,16 +310,26 @@ html {
     transition: all 0.5s;
 }
 
-.button-image-wrapper-color-inactive {
+.button-image-wrapper {
     background-color: var(--border-primary);
     cursor: pointer;
     transition: all 0.5s;
 }
-/* .button-color-inactive:hover .button-image-wrapper-color-inactive {
+.button-inactive > .button-image-wrapper {
+    background-color: var(--border-primary);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.button-inactive .button-text {
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.button-active > .button-image-wrapper {
     background: var(--background-page);
     cursor: pointer;
     transition: all 0.5s;
-} */
+}
 .button-text {
     color: var(--text-inverse);
     font-family: 'Inter';
@@ -323,13 +338,8 @@ html {
     font-weight: 600;
     line-height: 150%; /* 24px */
 }
-.button-text-color-inactive {
+/* .button-text-color-inactive {
     color: var(--text-primary);
-    cursor: pointer;
-    transition: all 0.5s;
-}
-/* .button-color-inactive:hover .button-text-color-inactive {
-    color: var(--text-inverse);
     cursor: pointer;
     transition: all 0.5s;
 } */
@@ -356,14 +366,9 @@ html {
     height: 505px;
     padding-bottom: 20px;
 }
-/* .coffee-description:hover {
-    cursor: pointer;
+.card_hidden {
+    display: none;
 }
-.coffee-description:hover .image-background {
-    transition: all 0.5s;
-    cursor: pointer;
-    background-size: 100%;
-} */
 .wrapper-coffee-article {
     display: flex;
     flex-direction: column;
@@ -821,18 +826,18 @@ html {
     .menu-link:focus:after {
         width: 100%;
     }
-    .button-color-inactive:hover {
+    .button-inactive:hover {
         background: var(--background-container);
         border-style: none;
         cursor: pointer;
         transition: all 0.5s;
     }
-    .button-color-inactive:hover .button-image-wrapper-color-inactive {
+    .button-inactive:hover .button-image-wrapper{
         background: var(--background-page);
         cursor: pointer;
         transition: all 0.5s;
     }
-    .button-color-inactive:hover .button-text-color-inactive {
+    .button-inactive:hover .button-text {
         color: var(--text-inverse);
         cursor: pointer;
         transition: all 0.5s;
