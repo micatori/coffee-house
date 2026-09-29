@@ -130,7 +130,7 @@ window.onload = function() {
   }
   showOnlyCoffeeCards();
   // Tags
-    addTagsClickHandler();
+  addTagsClickHandler();
 }
 const generateArticles = (prod) => {
   let cards = [];
@@ -149,18 +149,18 @@ const renderArticlesToDom = () => {
 
 const addTagsClickHandler = () => {
   document.querySelector('.buttons-wrapper').addEventListener('click', (event) => {
-    if (event.target.classList.contains('button')) {
-      let clickedBtn = event.target;
+      const clickedBtn = event.target.closest('.button');
+      if (!clickedBtn) return;
+
       removeSelectedBtn();
       selectClickBtn(clickedBtn);
       if (clickedBtn) {
-        // !!!!!!
+        fiterCardsBySelectedBtn(clickedBtn.id);
       }
-    }
   })
 }
 const removeSelectedBtn = () => {
-  let btn = document.querySelector('button-active');
+  let btn = document.querySelector('.button-active');
   btn.classList.remove('button-active');
   btn.classList.add('button-inactive');
 }
@@ -170,12 +170,20 @@ const selectClickBtn = (clickedBtn) => {
 }
 const showOnlyCoffeeCards = () => {
   let cards = document.querySelectorAll('.menu-section .coffee-description')
-  console.log(cards[0]);
   console.log(cards[0].dataset.category);
   console.log(cards[0].dataset.id);
   cards.forEach((card) => {
     if (card.dataset.category !== "coffee") {
       card.classList.add('card_hidden');
+    }
+  })
+}
+const fiterCardsBySelectedBtn = (selectedId) => {
+  let cards = document.querySelectorAll('.menu-section .coffee-description');
+  cards.forEach(card => {
+    card.classList.add('card_hidden');
+    if (selectedId === card.dataset.category) {
+          card.classList.remove('card_hidden');
     }
   })
 }
