@@ -426,59 +426,9 @@ html {
     cursor: pointer;
     transition: all 0.5s;
 }
-.image-1 {
-    background: url(../assets/img/irish-coffee.png);
-    background-repeat: no-repeat;
-    background-size: 110%;
-    background-position: center;
-}
-.image-2 {
-    background: url(../assets/img/kahlua-2.png);
-    background-repeat: no-repeat;
-    background-size: 110%;
-    background-position: center;
-}
-.image-3 {
-    background: url(../assets/img/honey-3.png);
-    background-repeat: no-repeat;
-    background-size: 110%;
-    background-position: center;
-}
-.image-4 {
-    background: url(../assets/img/cappucino-4.png);
-    background-repeat: no-repeat;
-    background-size: 110%;
-    background-position: center;
-}
-.image-5 {
-    background: url(../assets/img/espresso-5.png);
-    background-repeat: no-repeat;
-    background-size: 110%;
-    background-position: center;
-}
-.image-6 {
-    background: url(../assets/img/latte-6.png);
-    background-repeat: no-repeat;
-    background-size: 110%;
-    background-position: center;
-}
-.image-7 {
-    background: url(../assets/img/latte-m-7.png);
-    background-repeat: no-repeat;
-    background-size: 110%;
-    background-position: center;
-}
-.image-8 {
-    background: url(../assets/img/coffee-8-cogn.png);
-    background-repeat: no-repeat;
-    background-size: 110%;
-    background-position: center;
-}
-
 .refresh-button {
     display: none;
 }
-/* background: url(<path-to-image>), lightgray 50% / cover no-repeat; */
 /* FOOTER */
 .footer {
     padding: 0 40px 40px;
