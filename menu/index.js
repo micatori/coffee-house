@@ -811,3 +811,55 @@ document.addEventListener('keydown', (event) => {
         closeMenu();
     }
 });
+
+// CARDS
+class Product {
+    constructor({ id, name, description, price, category }) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.category = category;
+  }
+  generateProduct() {
+    let template = '';
+    let divDescription = document.createElement('div');
+    divDescription.className = 'coffee-description';
+    divDescription.setAttribute('data-id', this.id);
+
+    this.id &&
+    (template += `<img class="image-background" src="../assets/img_menu/prod${this.id}.png" alt="${this.name}">`);
+
+    let divWrapper = document.createElement('div');
+    divWrapper.className = 'wrapper-coffee-article';
+    divWrapper.innerHTML = `
+      <h3 class="coffee-description-title">${this.name}</h3>
+      <p class="coffee-description-text">${this.description}</p>
+      `;
+    template += divWrapper.outerHTML;
+    template += `<p class="coffee-description-price">$${this.price}</p>`
+
+    divDescription.innerHTML = template;
+    return divDescription;
+    }
+}
+window.onload = function() {
+  let start = 8;
+  if (products) {
+    renderArticlesToDom();
+  }
+}
+const generateArticles = (prod) => {
+  let cards = [];
+  prod.forEach(card => {
+    cards.push(new Product(card))
+  })
+  return cards;
+}
+const renderArticlesToDom = () => {
+  const menuSection = document.querySelector('.menu-section');
+  generateArticles(products).forEach(card => {
+    let articleAnotherOne = card.generateProduct();
+    menuSection.append(articleAnotherOne);
+  })
+}
