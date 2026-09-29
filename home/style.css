@@ -891,6 +891,29 @@ html {
     .closed .burger-item2 {
         transform: rotate(-45deg);
     }
+    /* menu */
+    .nav-list {
+        * {
+            font-size: 32px;
+        }
+        .nav-item:last-child {
+            margin-top: 40px;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 125%;
+            text-align: center;
+            color: var(--text-primary);
+        }
+        .menu-link-wrapper {
+            margin: 0;
+            margin-top: 40px;
+            align-items: center;
+        }
+        .cup-menu-svg {
+            height: 40px;
+            width: 40px;
+        }
+    }
 }
 @media screen and (max-width: 600px) {
     .btn-arrow {
