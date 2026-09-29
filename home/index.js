@@ -108,9 +108,6 @@ let currentSlide = 1;
 const showSlide = (index, animate = true) => {
     slider.style.transition = animate ? 'transform 0.5s ease' : 'none';
     slider.style.transform = `translateX(-${index * 100}%)`;
-    // bars.forEach((bar, i) => {
-    //     bar.classList.toggle('bar-active', i === index);
-    // });
 }
 const updateBar = () => {
     let activeIndex = currentSlide - 1;
@@ -127,9 +124,6 @@ const updateBar = () => {
 
 btnRight.addEventListener('click', () => {
     currentSlide++;
-    // if (currentSlide >= sliderItems.length) {
-    //     currentSlide = 0;
-    // }
     showSlide(currentSlide);
     updateBar();
 });
@@ -147,9 +141,6 @@ slider.addEventListener('transitionend', () => {
 
 btnLeft.addEventListener('click', () => {
     currentSlide--;
-    // if (currentSlide < 0) {
-    //     currentSlide = sliderItems.length - 1;
-    // }
     showSlide(currentSlide);
     updateBar();
 });
