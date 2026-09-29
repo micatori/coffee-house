@@ -45,3 +45,10 @@ navLinks.forEach((link) => {
         document.body.classList.remove('no-scroll');
     });
 });
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        burgerButton.classList.remove('closed');
+        nav.classList.remove('nav-open');
+        document.body.classList.remove('no-scroll');
+    }
+});
