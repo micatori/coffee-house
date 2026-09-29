@@ -105,6 +105,7 @@ class Product {
     let divDescription = document.createElement('div');
     divDescription.className = 'coffee-description';
     divDescription.setAttribute('data-id', this.id);
+    divDescription.setAttribute('data-category', this.category);
 
     this.id &&
     (template += `<img class="image-background" src="../assets/img_menu/prod${this.id}.png" alt="${this.name}">`);
@@ -153,7 +154,7 @@ const addTagsClickHandler = () => {
       removeSelectedBtn();
       selectClickBtn(clickedBtn);
       if (clickedBtn) {
-
+        // !!!!!!
       }
     }
   })
@@ -170,10 +171,10 @@ const selectClickBtn = (clickedBtn) => {
 const showOnlyCoffeeCards = () => {
   let cards = document.querySelectorAll('.menu-section .coffee-description')
   console.log(cards[0]);
-  console.log(cards[0]["category"]);
+  console.log(cards[0].dataset.category);
   console.log(cards[0].dataset.id);
-  cards.forEach((card, index) => {
-    if (index >= 8) {
+  cards.forEach((card) => {
+    if (card.dataset.category !== "coffee") {
       card.classList.add('card_hidden');
     }
   })
