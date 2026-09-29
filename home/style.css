@@ -353,14 +353,30 @@ html {
     flex-direction: row;
     justify-content: space-between;
 }
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
 .slider {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    transition: transform 0.5s ease;
 }
+.slider-item {
+    display: flex;
+    flex-direction: column;
+    /* width: 1152px; */
+    flex: 0 0 100%;
+    width: 100%;
+}
+/* .slider-item-active {
+    flex: 1;
+} */
 .favorite-carusel {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 .favorite-img {
     margin-top: 40px;
