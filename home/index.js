@@ -96,26 +96,61 @@ const btnLeft = document.getElementById('btn-left');
 const btnRight = document.getElementById('btn-right');
 const bars = document.querySelectorAll('.coffee-bar');
 
-let currentSlide = 0;
+const slideCount = sliderItems.length;
+const firstSlide = sliderItems[0].cloneNode(true);
+const lastSlide = sliderItems[slideCount - 1].cloneNode(true);
 
-const showSlide = (index) => {
+slider.append(firstSlide);
+slider.prepend(lastSlide);
+
+let currentSlide = 1;
+
+const showSlide = (index, animate = true) => {
+    slider.style.transition = animate ? 'transform 0.5s ease' : 'none';
     slider.style.transform = `translateX(-${index * 100}%)`;
-    bars.forEach((bar, i) => {
-        bar.classList.toggle('bar-active', i === index);
-    });
+    // bars.forEach((bar, i) => {
+    //     bar.classList.toggle('bar-active', i === index);
+    // });
 }
+const updateBar = () => {
+    let activeIndex = currentSlide - 1;
+    if (activeIndex < 0) {
+        activeIndex = slideCount - 1;
+    }
+    if (activeIndex >= slideCount) {
+        activeIndex = 0;
+    }
+    bars.forEach((bar, index) => {
+        bar.classList.toggle('bar-active', index === activeIndex);
+    });
+};
+
 btnRight.addEventListener('click', () => {
     currentSlide++;
-    if (currentSlide >= sliderItems.length) {
-        currentSlide = 0;
-    }
+    // if (currentSlide >= sliderItems.length) {
+    //     currentSlide = 0;
+    // }
     showSlide(currentSlide);
+    updateBar();
 });
+
+slider.addEventListener('transitionend', () => {
+    if (currentSlide === slideCount + 1) {
+        currentSlide = 1;
+        showSlide(currentSlide, false);
+    }
+    if (currentSlide === 0) {
+        currentSlide = slideCount;
+        showSlide(currentSlide, false);
+    }
+});
+
 btnLeft.addEventListener('click', () => {
     currentSlide--;
-    if (currentSlide < 0) {
-        currentSlide = sliderItems.length - 1;
-    }
+    // if (currentSlide < 0) {
+    //     currentSlide = sliderItems.length - 1;
+    // }
     showSlide(currentSlide);
+    updateBar();
 });
 showSlide(currentSlide);
