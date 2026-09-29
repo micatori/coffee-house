@@ -366,14 +366,9 @@ html {
     height: 505px;
     padding-bottom: 20px;
 }
-/* .coffee-description:hover {
-    cursor: pointer;
+.card_hidden {
+    display: none;
 }
-.coffee-description:hover .image-background {
-    transition: all 0.5s;
-    cursor: pointer;
-    background-size: 100%;
-} */
 .wrapper-coffee-article {
     display: flex;
     flex-direction: column;
