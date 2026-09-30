@@ -252,7 +252,9 @@ html {
     align-items: center;
     z-index: 900; /* Чтобы окно было поверх остальных элементов */
 }
-
+.modal-hidden {
+    display: none;
+}
 .modal {
     display: flex;
     flex-direction: row;
