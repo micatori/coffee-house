@@ -131,6 +131,8 @@ window.onload = function() {
   showOnlyCoffeeCards();
   // Tags
   addTagsClickHandler();
+  // modal
+  addCardsClickHandler();
 }
 const generateArticles = (prod) => {
   let cards = [];
@@ -187,3 +189,192 @@ const fiterCardsBySelectedBtn = (selectedId) => {
     }
   })
 }
+
+
+// MODAL
+console.log(products[0].sizes)
+console.log(products[0].sizes.s);
+console.log(products[0].sizes.m);
+console.log(products[0].sizes.l);
+console.log(products[0].additives);
+console.log(products[0].additives[0]);
+console.log(products[0].additives[1]);
+console.log(products[0].additives[2]);
+
+
+class Modal {
+  constructor({ id, name, description, price, category, sizes, additives }) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.category = category;
+        this.sizes = sizes;
+        this.additives = additives;
+  }
+  generateModal() {
+    // <div class="modal-overlay">
+    let divModalOverlay = document.createElement('div');
+    divModalOverlay.className = 'modal-overlay';
+    divModalOverlay.setAttribute('data-id', this.id);
+    divModalOverlay.setAttribute('data-category', this.category);
+    // <div class="modal">
+    let divModal = document.createElement('div');
+    divModal.className = 'modal';
+    // <div class="modal-img-box">
+    let divModalImgBox = document.createElement('div');
+    divModalImgBox.className = 'modal-img-box';
+    let image = `<img class="modal-img" src="../assets/img_menu/prod${this.id}.png" alt="${this.name}">`;
+    divModalImgBox.innerHTML = image;
+
+    // <div class="modal-wrapper">
+    let divModalWrapper = document.createElement('div');
+    divModalWrapper.className = 'modal-wrapper';
+
+    // <div class="modal-wrapper-description">
+    let divModalWrapperDescription = document.createElement('div');
+    divModalWrapperDescription.className = 'modal-wrapper-description';
+    let modalTitle = `<h3 class="modal-title">${this.name}</h3>`;
+    let modalDescriptionText = `<p class="modal-description-text">${this.description}</p>`
+    divModalWrapperDescription.innerHTML = modalTitle;
+    divModalWrapperDescription.innerHTML += modalDescriptionText;
+    // <div class="modal-box" id="size">
+    let divModalBoxSize = document.createElement('div');
+    divModalBoxSize.className = 'modal-box';
+    divModalBoxSize.id = 'size';
+    let sizeTitle = `<h4 class="modal-box-title">Size</h4>`;
+    divModalBoxSize.innerHTML = sizeTitle;
+    // spans
+    const createSizeButton = (id, size, volume, addPrice) => {
+      const button = document.createElement('span');
+      button.id = id;
+      button.className = 'modal-button';
+      button.dataset.addPrice = addPrice;
+      const spanSize = document.createElement('span');
+      spanSize.className = 'modal-size';
+      spanSize.textContent = size;
+      button.append(spanSize, ` ${volume}`);
+      return button;
+    };
+    const spanS = createSizeButton('S', 'S', this.sizes.s.size, this.sizes.s['add-price']);
+    spanS.classList.add('modal-size-active');
+    const spanM = createSizeButton('M', 'M', this.sizes.m.size, this.sizes.m['add-price']);
+    const spanL = createSizeButton('L', 'L', this.sizes.l.size, this.sizes.l['add-price']);
+    divModalBoxSize.append(spanS, spanM, spanL);
+
+    // <div class="modal-box" id="additives">
+    let divModalBoxAdditives = document.createElement('div');
+    divModalBoxAdditives.className = 'modal-box';
+    divModalBoxAdditives.id = 'additives';
+    let addTitle = `<h4 class="modal-box-title">Additives</h4>`;
+    divModalBoxAdditives.innerHTML = addTitle;
+    // // spans
+    const createAdditiveButton = (id, number, name, addPrice) => {
+      const button = document.createElement('span');
+      button.id = id;
+      button.className = 'modal-button';
+      button.dataset.addPrice = addPrice;
+      const spanNumber = document.createElement('span');
+      spanNumber.className = 'modal-size';
+      spanNumber.textContent = number;
+      button.append(spanNumber, ` ${name}`);
+      return button;
+    };
+    const span1 = createAdditiveButton( 1, 1,
+      this.additives[0].name,
+      this.additives[0]['add-price']
+    );
+    const span2 = createAdditiveButton(2, 2,
+      this.additives[1].name,
+      this.additives[1]['add-price']
+    );
+    const span3 = createAdditiveButton(3, 3,
+      this.additives[2].name,
+      this.additives[2]['add-price']
+    );
+    divModalBoxAdditives.append(span1, span2, span3);
+    // <div class="modal-total-wrapper">
+    let divModalTotalWrapper = document.createElement('div');
+    divModalTotalWrapper.className = 'modal-total-wrapper';
+    let total = `<span class="modal-total-span">Total:</span>`;
+    divModalTotalWrapper.innerHTML = total;
+    const modalTotalSpan = document.createElement('span');
+    modalTotalSpan.id = "total";
+    modalTotalSpan.className = "modal-total-span";
+    modalTotalSpan.textContent = this.price;
+    divModalTotalWrapper.append(modalTotalSpan);
+    // <div class="modal-info-wrapper">
+    const modalInfoWrapper = document.createElement('div');
+    modalInfoWrapper.className = 'modal-info-wrapper';
+    let modalInfoI = `<span class="modal-info-i">i</span>`;
+    modalInfoWrapper.innerHTML = modalInfoI;
+    let modalInfoText = `
+    <span class="modal-info-text">
+        The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.
+    </span>`;
+    modalInfoWrapper.innerHTML += modalInfoText;
+// <button id="modal-close-button" class="modal-close-button">Close</button>
+    const modalCloseButton = document.createElement('button');
+    modalCloseButton.id="modal-close-button";
+    modalCloseButton.className = "modal-close-button";
+    modalCloseButton.textContent = 'Close';
+
+    divModalWrapper.append(divModalWrapperDescription);
+    divModalWrapper.append(divModalBoxSize);
+    divModalWrapper.append(divModalBoxAdditives);
+    divModalWrapper.append(divModalTotalWrapper);
+    divModalWrapper.append(modalInfoWrapper);
+    divModalWrapper.append(modalCloseButton);
+    //
+    divModal.append(divModalImgBox);
+    divModal.append(divModalWrapper);
+    divModalOverlay.append(divModal);
+
+    return divModalOverlay;
+  }
+  // OPN
+  openModal() {
+    this.overlay = this.generateModal();
+    document.body.append(this.overlay);
+
+    const closeButton = this.overlay.querySelector('#modal-close-button');
+
+    closeButton.addEventListener('click', () => {
+      this.closeModal();
+    });
+
+    this.overlay.addEventListener('click', (event) => {
+      if (event.target === this.overlay) {
+        this.closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', this.handleEscape);
+  }
+// CLOS
+  closeModal() {
+    if (this.overlay) {
+      this.overlay.remove();
+      this.overlay = null;
+    }
+    document.removeEventListener('keydown', this.handleEscape);
+  }
+
+  handleEscape = (event) => {
+    if (event.key === 'Escape') {
+      this.closeModal();
+    }
+  };
+}
+const addCardsClickHandler = () => {
+  const menuSection = document.querySelector('.menu-section');
+  menuSection.addEventListener('click', (event) => {
+    const clickedCard = event.target.closest('.coffee-description');
+    if (!clickedCard) return;
+    const productId = Number(clickedCard.dataset.id);
+    const product = products.find(product => product.id === productId);
+    if (!product) return;
+    const modal = new Modal(product);
+    modal.openModal();
+  });
+};
