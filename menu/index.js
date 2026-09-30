@@ -190,3 +190,104 @@ const fiterCardsBySelectedBtn = (selectedId) => {
 
 
 // MODAL
+console.log(products[0].sizes)
+console.log(products[0].sizes.s);
+console.log(products[0].sizes.m);
+console.log(products[0].sizes.l);
+console.log(products[0].additives);
+console.log(products[0].additives[0]);
+console.log(products[0].additives[1]);
+console.log(products[0].additives[2]);
+
+
+class Modal {
+  constructor({ id, name, description, price, category, sizes, additives }) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.category = category;
+        this.sizes = sizes;
+        this.additives = additives;
+  }
+  generateModal() {
+    let template = '';
+    // <div class="modal-overlay">
+    let divModalOverlay = document.createElement('div');
+    divModalOverlay.className = 'modal-overlay';
+    divModalOverlay.setAttribute('data-id', this.id);
+    divModalOverlay.setAttribute('data-category', this.category);
+    // <div class="modal">
+    let divModal = document.createElement('div');
+    divModal.className = 'modal';
+    // <div class="modal-img-box">
+    let divModalImgBox = document.createElement('div');
+    divModalImgBox.className = 'modal-img-box';
+    let image = `<img class="modal-img" src="../assets/img_menu/prod${this.id}.png" alt="${this.name}">`;
+    divModalImgBox.innerHTML = image;
+
+    // <div class="modal-wrapper">
+    let divModalWrapper = document.createElement('div');
+    divModalWrapper.className = 'modal-wrapper';
+
+    // <div class="modal-wrapper-description">
+    let divModalWrapperDescription = document.createElement('div');
+    divModalWrapperDescription.className = 'modal-wrapper-description';
+    let modalTitle = `<h3 class="modal-title">${this.name}</h3>`;
+    let modalDescriptionText = `<p class="modal-description-text">${this.description}</p>`
+    divModalWrapperDescription.innerHTML = modalTitle;
+    divModalWrapperDescription.innerHTML = modalDescriptionText;
+    // <div class="modal-box" id="size">
+    let divModalBoxSize = document.createElement('div');
+    divModalBoxSize.className = 'modal-box';
+    divModalBoxSize.id = 'size';
+    let sizeTitle = `<h4 class="modal-box-title">Size</h4>`;
+    divModalBoxSize.innerHTML = sizeTitle;
+    // spans
+    const createSizeButton = (id, size, volume, addPrice) => {
+      const button = document.createElement('span');
+      button.id = id;
+      button.className = 'modal-button';
+      button.dataset.addPrice = addPrice;
+      const spanSize = document.createElement('span');
+      spanSize.className = 'modal-size';
+      spanSize.textContent = size;
+      button.append(spanSize, ` ${volume}`);
+      return button;
+    };
+    const spanS = createSizeButton('S', 'S', this.sizes.s.size, this.sizes.s['add-price']);
+    spanS.classList.add('modal-size-active');
+    const spanM = createSizeButton('M', 'M', this.sizes.m.size, this.sizes.m['add-price']);
+    const spanL = createSizeButton('L', 'L', this.sizes.l.size, this.sizes.l['add-price']);
+    divModalBoxSize.append(spanS, spanM, spanL);
+
+    // <div class="modal-box" id="additives">
+    let divModalBoxAdditives = document.createElement('div');
+    divModalBoxSize.className = 'modal-box';
+    divModalBoxSize.id = 'additives';
+    let addTitle = `<h4 class="modal-box-title">Additives</h4>`;
+    divModalBoxSize.innerHTML = addTitle;
+    // // spans
+
+    divModalWrapper.append(divModalBoxSize);
+    divModalWrapper.append(divModalWrapperDescription);
+    //
+    divModal.append(divModalWrapper);
+    divModal.append(divModalImgBox);
+    divModalOverlay.append(divModal);
+  }
+}
+    // this.id &&
+    // (template +=
+
+    // let divWrapper = document.createElement('div');
+    // divWrapper.className = 'wrapper-coffee-article';
+    // divWrapper.innerHTML = `
+    //   <h3 class="coffee-description-title">${this.name}</h3>
+    //   <p class="coffee-description-text">${this.description}</p>
+    //   `;
+    // template += divWrapper.outerHTML;
+    // template += `<p class="coffee-description-price">$${this.price}</p>`
+
+    // divDescription.innerHTML = template;
+    // return divDescription;
