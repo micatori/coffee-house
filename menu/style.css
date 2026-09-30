@@ -279,6 +279,7 @@ html {
     height: 310px;
     overflow: hidden;
     margin-right: 20px;
+    flex-shrink: 0;
 }
 .modal-img {
     width: 100%;

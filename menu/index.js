@@ -131,6 +131,8 @@ window.onload = function() {
   showOnlyCoffeeCards();
   // Tags
   addTagsClickHandler();
+  // modal
+  addCardsClickHandler();
 }
 const generateArticles = (prod) => {
   let cards = [];
@@ -211,7 +213,6 @@ class Modal {
         this.additives = additives;
   }
   generateModal() {
-    let template = '';
     // <div class="modal-overlay">
     let divModalOverlay = document.createElement('div');
     divModalOverlay.className = 'modal-overlay';
@@ -325,9 +326,55 @@ class Modal {
     divModalWrapper.append(modalInfoWrapper);
     divModalWrapper.append(modalCloseButton);
     //
-    divModal.append(divModalWrapper);
     divModal.append(divModalImgBox);
+    divModal.append(divModalWrapper);
     divModalOverlay.append(divModal);
+
     return divModalOverlay;
   }
+  // OPN
+  openModal() {
+    this.overlay = this.generateModal();
+    document.body.append(this.overlay);
+
+    const closeButton = this.overlay.querySelector('#modal-close-button');
+
+    closeButton.addEventListener('click', () => {
+      this.closeModal();
+    });
+
+    this.overlay.addEventListener('click', (event) => {
+      if (event.target === this.overlay) {
+        this.closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', this.handleEscape);
+  }
+// CLOS
+  closeModal() {
+    if (this.overlay) {
+      this.overlay.remove();
+      this.overlay = null;
+    }
+    document.removeEventListener('keydown', this.handleEscape);
+  }
+
+  handleEscape = (event) => {
+    if (event.key === 'Escape') {
+      this.closeModal();
+    }
+  };
 }
+const addCardsClickHandler = () => {
+  const menuSection = document.querySelector('.menu-section');
+  menuSection.addEventListener('click', (event) => {
+    const clickedCard = event.target.closest('.coffee-description');
+    if (!clickedCard) return;
+    const productId = Number(clickedCard.dataset.id);
+    const product = products.find(product => product.id === productId);
+    if (!product) return;
+    const modal = new Modal(product);
+    modal.openModal();
+  });
+};
