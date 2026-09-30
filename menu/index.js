@@ -279,15 +279,15 @@ class Modal {
       button.append(spanNumber, ` ${name}`);
       return button;
     };
-    const span1 = createAdditiveButton('berries', 1,
+    const span1 = createAdditiveButton( 1, 1,
       this.additives[0].name,
       this.additives[0]['add-price']
     );
-    const span2 = createAdditiveButton('nuts', 2,
+    const span2 = createAdditiveButton(2, 2,
       this.additives[1].name,
       this.additives[1]['add-price']
     );
-    const span3 = createAdditiveButton('jam',3,
+    const span3 = createAdditiveButton(3, 3,
       this.additives[2].name,
       this.additives[2]['add-price']
     );
@@ -301,6 +301,7 @@ class Modal {
     modalTotalSpan.id = "total";
     modalTotalSpan.className = "modal-total-span";
     modalTotalSpan.innerHTML = this.price;
+    divModalTotalWrapper.append(modalTotalSpan);
     // <div class="modal-info-wrapper">
     const modalInfoWrapper = document.createElement('div');
     modalInfoWrapper.className = 'modal-info-wrapper';
@@ -330,17 +331,3 @@ class Modal {
     return divModalOverlay;
   }
 }
-    // this.id &&
-    // (template +=
-
-    // let divWrapper = document.createElement('div');
-    // divWrapper.className = 'wrapper-coffee-article';
-    // divWrapper.innerHTML = `
-    //   <h3 class="coffee-description-title">${this.name}</h3>
-    //   <p class="coffee-description-text">${this.description}</p>
-    //   `;
-    // template += divWrapper.outerHTML;
-    // template += `<p class="coffee-description-price">$${this.price}</p>`
-
-    // divDescription.innerHTML = template;
-    // return divDescription;
