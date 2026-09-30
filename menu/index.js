@@ -187,3 +187,6 @@ const fiterCardsBySelectedBtn = (selectedId) => {
     }
   })
 }
+
+
+// MODAL

@@ -239,6 +239,118 @@ html {
 .burger-button {
     display: none;
 }
+/* MODAL */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-overlay);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 900; /* Чтобы окно было поверх остальных элементов */
+}
+
+.modal {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    max-width: 800px;
+    width: 800px;
+    min-height: 504px;
+    /* justify-content: center;
+    align-items: center; */
+    background-color: var(--text-inverse);
+    padding: 16px;
+    border-radius: 40px;
+    /* ? */
+    transition: transform 0.3s ease;
+}
+.modal-img-box {
+    border-radius: 40px;
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.modal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+}
+.modal-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.modal-wrapper-description {
+    margin-bottom: 20px;
+}
+.modal-title {
+    margin-bottom: 12px;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    color: var(--text-primary);
+}
+.modal-description-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text-primary);
+    font-family: 'Inter';
+    font-style: normal;
+}
+.modal-box {
+    margin-bottom: 20px;
+}
+.modal-box-title {
+    margin-bottom: 8px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text-primary);
+}
+.modal-button {
+    display: inline-block;
+    border-radius: 100px;
+    margin-right: 8px;
+    padding: 8px 16px 8px 8px;
+    height: 46px;
+    border: 1px solid var(--border-primary);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+.modal-size {
+    display: inline-block;
+    text-align: center;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: var(--border-primary);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+.modal-button-active {
+    color: var(--text-inverse);
+    background: var(--background-container);
+}
+.modal-button-active .modal-size {
+    background: var(--text-inverse);
+}
 /* MAIN */
 .main {
     display: flex;
