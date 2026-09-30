@@ -236,7 +236,7 @@ class Modal {
     let modalTitle = `<h3 class="modal-title">${this.name}</h3>`;
     let modalDescriptionText = `<p class="modal-description-text">${this.description}</p>`
     divModalWrapperDescription.innerHTML = modalTitle;
-    divModalWrapperDescription.innerHTML = modalDescriptionText;
+    divModalWrapperDescription.innerHTML += modalDescriptionText;
     // <div class="modal-box" id="size">
     let divModalBoxSize = document.createElement('div');
     divModalBoxSize.className = 'modal-box';
@@ -263,18 +263,71 @@ class Modal {
 
     // <div class="modal-box" id="additives">
     let divModalBoxAdditives = document.createElement('div');
-    divModalBoxSize.className = 'modal-box';
-    divModalBoxSize.id = 'additives';
+    divModalBoxAdditives.className = 'modal-box';
+    divModalBoxAdditives.id = 'additives';
     let addTitle = `<h4 class="modal-box-title">Additives</h4>`;
-    divModalBoxSize.innerHTML = addTitle;
+    divModalBoxAdditives.innerHTML = addTitle;
     // // spans
+    const createAdditiveButton = (id, number, name, addPrice) => {
+      const button = document.createElement('span');
+      button.id = id;
+      button.className = 'modal-button';
+      button.dataset.addPrice = addPrice;
+      const spanNumber = document.createElement('span');
+      spanNumber.className = 'modal-size';
+      spanNumber.textContent = number;
+      button.append(spanNumber, ` ${name}`);
+      return button;
+    };
+    const span1 = createAdditiveButton('berries', 1,
+      this.additives[0].name,
+      this.additives[0]['add-price']
+    );
+    const span2 = createAdditiveButton('nuts', 2,
+      this.additives[1].name,
+      this.additives[1]['add-price']
+    );
+    const span3 = createAdditiveButton('jam',3,
+      this.additives[2].name,
+      this.additives[2]['add-price']
+    );
+    divModalBoxAdditives.append(span1, span2, span3);
+    // <div class="modal-total-wrapper">
+    let divModalTotalWrapper = document.createElement('div');
+    divModalTotalWrapper.className = 'modal-total-wrapper';
+    let total = `<span class="modal-total-span">Total:</span>`;
+    divModalTotalWrapper.innerHTML = total;
+    const modalTotalSpan = document.createElement('span');
+    modalTotalSpan.id = "total";
+    modalTotalSpan.className = "modal-total-span";
+    modalTotalSpan.innerHTML = this.price;
+    // <div class="modal-info-wrapper">
+    const modalInfoWrapper = document.createElement('div');
+    modalInfoWrapper.className = 'modal-info-wrapper';
+    let modalInfoI = `<span class="modal-info-i">i</span>`;
+    modalInfoWrapper.innerHTML = modalInfoI;
+    let modalInfoText = `
+    <span class="modal-info-text">
+        The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.
+    </span>`;
+    modalInfoWrapper.innerHTML += modalInfoText;
+// <button id="modal-close-button" class="modal-close-button">Close</button>
+    const modalCloseButton = document.createElement('button');
+    modalCloseButton.id="modal-close-button";
+    modalCloseButton.className = "modal-close-button";
+    modalCloseButton.innerHTML = 'Close';
 
+    divModalWrapper.append(modalCloseButton);
+    divModalWrapper.append(modalInfoWrapper);
+    divModalWrapper.append(divModalTotalWrapper);
+    divModalWrapper.append(divModalBoxAdditives);
     divModalWrapper.append(divModalBoxSize);
     divModalWrapper.append(divModalWrapperDescription);
     //
     divModal.append(divModalWrapper);
     divModal.append(divModalImgBox);
     divModalOverlay.append(divModal);
+    return divModalOverlay;
   }
 }
     // this.id &&
