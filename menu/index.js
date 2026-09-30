@@ -300,7 +300,7 @@ class Modal {
     const modalTotalSpan = document.createElement('span');
     modalTotalSpan.id = "total";
     modalTotalSpan.className = "modal-total-span";
-    modalTotalSpan.innerHTML = this.price;
+    modalTotalSpan.textContent = this.price;
     divModalTotalWrapper.append(modalTotalSpan);
     // <div class="modal-info-wrapper">
     const modalInfoWrapper = document.createElement('div');
@@ -316,14 +316,14 @@ class Modal {
     const modalCloseButton = document.createElement('button');
     modalCloseButton.id="modal-close-button";
     modalCloseButton.className = "modal-close-button";
-    modalCloseButton.innerHTML = 'Close';
+    modalCloseButton.textContent = 'Close';
 
-    divModalWrapper.append(modalCloseButton);
-    divModalWrapper.append(modalInfoWrapper);
-    divModalWrapper.append(divModalTotalWrapper);
-    divModalWrapper.append(divModalBoxAdditives);
-    divModalWrapper.append(divModalBoxSize);
     divModalWrapper.append(divModalWrapperDescription);
+    divModalWrapper.append(divModalBoxSize);
+    divModalWrapper.append(divModalBoxAdditives);
+    divModalWrapper.append(divModalTotalWrapper);
+    divModalWrapper.append(modalInfoWrapper);
+    divModalWrapper.append(modalCloseButton);
     //
     divModal.append(divModalWrapper);
     divModal.append(divModalImgBox);
