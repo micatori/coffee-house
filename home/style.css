@@ -23,7 +23,7 @@
     --white-color: #ffffff;
     /* modal */
     --background-modal: #e1d4c9;
-	--background-modalcontrol: #665f55;
+	--background-modal-control: #665f55;
 }
 .dark-mode {
 	--text-primary: #e1d4c9;
