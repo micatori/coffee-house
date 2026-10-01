@@ -38,6 +38,7 @@
     /* modal */
 	--background-modal: var(--background-container);
 	--background-modal-control: var(--background-page);
+    --dark-bg-page: #292826;
 }
 
 * {
@@ -854,6 +855,9 @@ html {
         background-color: var(--text-inverse);
         transform: translateX(100%);
         transition: transform 0.3s ease;
+    }
+    .dark-mode .nav {
+        background-color: var(--dark-bg-page);
     }
     .nav-open {
         transform: translateX(0);
