@@ -17,7 +17,7 @@
             <h1 class="h1-title">Coffee House Menu</h1>
             <a href="../home/index.html" class="header-logo logo-light"><img src="../assets/svg/logo.svg" alt="logo"></a>
             <a href="../home/index.html" class="header-logo logo-dark"><img src="../assets/svg/dark-logo.svg" alt="logo"></a>
-            <nav class="nav">
+            <nav class="nav" id="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a href="../home/index.html#favorite-coffee" class="nav-link">Favorite coffee</a>
@@ -44,7 +44,7 @@
                         </svg>
                     </span>
                 </button>
-                <a href="../menu/index.html" class="menu-link">
+                <a href="../menu/index.html" id="menu-link" class="menu-link">
                     <div class="menu-link-wrapper">
                         <p class="menu-p">Menu</p>
                         <!-- <img class="menu-img" src="../assets/svg/coffee-cup.svg" alt=""> -->
@@ -58,9 +58,10 @@
                         </div>
                     </div>
                 </a>
-                <a href="#" class="burger-button">
-                    <img src="../assets/svg/button-icon-burger.svg" alt="menu">
-                </a>
+                <div id="burger-button" class="burger-button">
+                    <div class="burger-item burger-item1"></div>
+                    <div class="burger-item burger-item2"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -72,92 +73,29 @@
                 <i class="section-title-accent">amazing surprise</i>
             </h2>
             <div class="buttons-wrapper">
-                <div class="button">
+                <div id="coffee" class="button button-active">
                     <div class="button-image-wrapper">
                         <img src="../assets/svg/cup-icon.svg" alt="cup" class="button-image">
                     </div>
                     <p class="button-text">Coffee</p>
                 </div>
-                <div class="button button-color-inactive">
-                    <div class="button-image-wrapper button-image-wrapper-color-inactive">
+                <div id="tea" class="button button-inactive">
+                    <div class="button-image-wrapper">
                         <img src="../assets/svg/teapot-icon.svg" alt="cup" class="button-image">
                     </div>
-                    <p class="button-text button-text-color-inactive">Tea</p>
+                    <p class="button-text">Tea</p>
                 </div>
-                <div class="button button-color-inactive">
-                    <div class="button-image-wrapper button-image-wrapper-color-inactive">
+                <div id="dessert" class="button button-inactive">
+                    <div class="button-image-wrapper">
                         <img src="../assets/svg/cake-icon.svg" alt="cup" class="button-image">
                     </div>
-                    <p class="button-text button-text-color-inactive">Dessert</p>
+                    <p class="button-text">Dessert</p>
                 </div>
             </div>
             <section class="menu-section">
-                <div class="coffee-description">
-                    <div class="image-background image-1"></div>
-                    <div class="wrapper-coffee-article">
-                        <h3 class="coffee-description-title">Irish coffee</h3>
-                        <p class="coffee-description-text">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-                    </div>
-                    <p class="coffee-description-price prace-1-margin-top">$7.00</p>
-                </div>
-                <div class="coffee-description">
-                    <div class="image-background image-2"></div>
-                    <div class="wrapper-coffee-article">
-                        <h3 class="coffee-description-title">Kahlua coffee</h3>
-                        <p class="coffee-description-text">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
-                    </div>
-                    <p class="coffee-description-price">$7.00</p>
-                </div>
-                <div class="coffee-description">
-                    <div class="image-background image-3"></div>
-                    <div class="wrapper-coffee-article">
-                        <h3 class="coffee-description-title">Honey raf</h3>
-                        <p class="coffee-description-text">Espresso with frothed milk, cream and aromatic honey</p>
-                    </div>
-                    <p class="coffee-description-price">$5.50</p>
-                </div>
-                <div class="coffee-description">
-                    <div class="image-background image-4"></div>
-                    <div class="wrapper-coffee-article">
-                        <h3 class="coffee-description-title">Ice cappuccino</h3>
-                        <p class="coffee-description-text">Cappuccino with soft thick foam in summer version with ice</p>
-                    </div>
-                    <p class="coffee-description-price">$5.00</p>
-                </div>
-                <div class="coffee-description second-row">
-                    <div class="image-background image-5"></div>
-                    <div class="wrapper-coffee-article">
-                        <h3 class="coffee-description-title">Espresso</h3>
-                        <p class="coffee-description-text">Classic black coffee</p>
-                    </div>
-                    <p class="coffee-description-price prace-5-margin-top">$4.50</p>
-                </div>
-                <div class="coffee-description second-row">
-                    <div class="image-background image-6"></div>
-                    <div class="wrapper-coffee-article">
-                        <h3 class="coffee-description-title">Latte</h3>
-                        <p class="coffee-description-text">Espresso coffee with the addition of steamed milk and dense milk foam</p>
-                    </div>
-                    <p class="coffee-description-price prace-6-margin-top">$5.50</p>
-                </div>
-                <div class="coffee-description second-row">
-                    <div class="image-background image-7"></div>
-                    <div class="wrapper-coffee-article">
-                        <h3 class="coffee-description-title">Latte macchiato</h3>
-                        <p class="coffee-description-text">Espresso with frothed milk and chocolate</p>
-                    </div>
-                    <p class="coffee-description-price">$5.50</p>
-                </div>
-                <div class="coffee-description second-row">
-                    <div class="image-background image-8"></div>
-                    <div class="wrapper-coffee-article">
-                        <h3 class="coffee-description-title">Coffee with cognac</h3>
-                        <p class="coffee-description-text">Fragrant black coffee with cognac and whipped cream</p>
-                    </div>
-                    <p class="coffee-description-price">$6.50</p>
-                </div>
+                <!-- js code here -->
             </section>
-            <button class="refresh-button">
+            <button class="refresh-button refresh-button-active">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
@@ -231,6 +169,7 @@
             </div>
         </div>
     </footer>
-    <script src="../index.js"></script>
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@
         <div class="header-wrapper container">
             <a href="../home/index.html" class="header-logo logo-light"><img src="../assets/svg/logo.svg" alt="logo"></a>
             <a href="../home/index.html" class="header-logo logo-dark"><img src="../assets/svg/dark-logo.svg" alt="logo"></a>
-            <nav class="nav">
+            <nav class="nav" id="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a href="#favorite-coffee" class="nav-link">Favorite coffee</a>
@@ -43,7 +43,7 @@
                         </svg>
                     </span>
                 </button>
-                <a href="../menu/index.html" class="menu-link">
+                <a href="../menu/index.html" id="menu-link" class="menu-link">
                     <div class="menu-link-wrapper">
                         <p class="menu-p">Menu</p>
                         <!-- <img class="menu-img" src="../assets/svg/coffee-cup.svg" alt=""> -->
@@ -57,9 +57,10 @@
                         </div>
                     </div>
                 </a>
-                <a href="#" class="burger-button">
-                    <img src="../assets/svg/button-icon-burger.svg" alt="">
-                </a>
+                <div id="burger-button" class="burger-button">
+                    <div class="burger-item burger-item1"></div>
+                    <div class="burger-item burger-item2"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -89,27 +90,65 @@
         <div class="favorite-background container" id="favorite-coffee">
             <section class="favorite-section">
                 <h2 class="section-title">Choose your <i class="section-title-accent">favorite</i> coffee</h2>
-                <div class="favorite-carusel">
-                    <svg class="btn-arrow" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55"/>
-                        <path class="color-of-arrow" d="M36.5 30H24M24 30L30 24M24 30L30 36" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <img src="../assets/img/coffee-glass.png" alt="coffee-glass" class="favorite-img">
-                    <svg class="btn-arrow" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55"/>
-                        <path class="color-of-arrow" d="M24 30H36.5M36.5 30L30.5 24M36.5 30L30.5 36" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="coffee-description">
-                    <h3 class="coffee-description-title">S’mores Frappuccino</h3>
-                    <p class="coffee-description-text">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                    <p class="coffee-description-price">$5.50</p>
+                <!-- SLIDER -->
+                <div class="slider-wrapper">
+                    <div id="btn-left">
+                        <svg class="btn-arrow" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55"/>
+                            <path class="color-of-arrow" d="M36.5 30H24M24 30L30 24M24 30L30 36" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="slider-container">
+                        <div id="slider" class="slider">
+                            <!-- 1 -->
+                            <div id="slider-item_1" class="slider-item">
+                                <div class="favorite-carusel">
+                                    <img src="../assets/img/coffee-glass.png" alt="coffee-glass" class="favorite-img">
+                                </div>
+                                <div class="coffee-description">
+                                    <h3 class="coffee-description-title">S’mores Frappuccino</h3>
+                                    <p class="coffee-description-text">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                                    <p class="coffee-description-price">$5.50</p>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div id="slider-item_2" class="slider-item">
+                                <div class="favorite-carusel">
+                                    <img src="../assets/img/coffee-slider-2.png" alt="coffee-macciato" class="favorite-img">
+                                </div>
+                                <div class="coffee-description">
+                                    <h3 class="coffee-description-title">Caramel Macchiato</h3>
+                                    <p class="coffee-description-text">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                                    <p class="coffee-description-price">$5.00</p>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div id="slider-item_3" class="slider-item">
+                                <div class="favorite-carusel">
+                                    <img src="../assets/img/coffee-slider-3.png" alt="coffee-ice" class="favorite-img">
+                                </div>
+                                <div class="coffee-description">
+                                    <h3 class="coffee-description-title">Ice coffee</h3>
+                                    <p class="coffee-description-text">A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                                    <p class="coffee-description-price">$4.50</p>
+                                </div>
+                            </div>
+                            <!-- !!! -->
+                        </div>
+                    </div>
+                    <div id="btn-right">
+                        <svg class="btn-arrow" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#665F55"/>
+                            <path class="color-of-arrow" d="M24 30H36.5M36.5 30L30.5 24M36.5 30L30.5 36" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </div>
                 <div class="coffee-bar-wrapper">
-                    <div class="coffee-bar bar-active"></div>
-                    <div class="coffee-bar"></div>
-                    <div class="coffee-bar"></div>
+                    <div id="bar-1" class="coffee-bar bar-active"></div>
+                    <div id="bar-2" class="coffee-bar"></div>
+                    <div id="bar-3" class="coffee-bar"></div>
                 </div>
+                <!-- SLIDER -->
             </section>
         </div>
         <!-- ABOUT -->
@@ -228,6 +267,6 @@
             </div>
         </div>
     </footer>
-    <script src="../index.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

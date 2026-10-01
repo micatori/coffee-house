@@ -1,0 +1,187 @@
+// DARK__MODE
+const modeToggle = document.getElementById('mode-toggle');
+const modeWrapper = modeToggle;
+const sunBox = modeToggle.querySelector('.sun__box');
+const moonBox = modeToggle.querySelector('.moon__box');
+const moonIcon = modeToggle.querySelector('.moon-icon');
+function setTheme(theme) {
+    const isDark = theme === 'dark';
+    document.documentElement.classList.toggle('dark-mode', isDark);
+
+    modeWrapper.classList.toggle('mode__wrapper_dark', isDark);
+    modeWrapper.classList.toggle('mode__wrapper_light', !isDark);
+    sunBox.classList.toggle('sun__box_dark', isDark);
+    sunBox.classList.toggle('sun__box_light', !isDark);
+    moonBox.classList.toggle('moon__box_dark', isDark);
+    moonBox.classList.toggle('moon__box_light', !isDark);
+    moonIcon.classList.toggle('moon-icon_dark', isDark);
+    moonIcon.classList.toggle('moon-icon_light', !isDark);
+
+    localStorage.setItem('theme', theme);
+}
+const savedTheme = localStorage.getItem('theme') || 'light';
+setTheme(savedTheme);
+
+modeToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.contains('dark-mode');
+    setTheme(isDark ? 'light' : 'dark');
+});
+
+// BURGER_MENU
+const burgerButton = document.getElementById('burger-button');
+const nav = document.getElementById('nav');
+const navList = document.querySelector('.nav-list');
+const navLinks = document.querySelectorAll('.nav-link');
+const menuLink = document.getElementById('menu-link');
+
+const addMenuLink = () => {
+    if (window.innerWidth <= 768 && !document.getElementById('mobile-menu-link')) {
+        const mobileMenuLink = menuLink.cloneNode(true);
+
+        mobileMenuLink.id = 'mobile-menu-link';
+        mobileMenuLink.classList.remove('menu-link');
+        mobileMenuLink.classList.add('nav-link');
+
+        navList.append(mobileMenuLink);
+    }
+};
+
+const removeMenuLink = () => {
+    const mobileMenuLink = document.getElementById('mobile-menu-link');
+
+    if (mobileMenuLink) {
+        mobileMenuLink.remove();
+    }
+};
+
+const closeMenu = () => {
+    burgerButton.classList.remove('closed');
+    nav.classList.remove('nav-open');
+    document.body.classList.remove('no-scroll');
+    removeMenuLink();
+}
+
+burgerButton.addEventListener('click', () => {
+    burgerButton.classList.toggle('closed');
+    nav.classList.toggle('nav-open');
+    document.body.classList.toggle('no-scroll');
+
+    if (nav.classList.contains('nav-open')) {
+        addMenuLink();
+    } else {
+        removeMenuLink();
+    }
+});
+
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        closeMenu();
+    });
+});
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        closeMenu();
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeMenu();
+    }
+});
+
+window.addEventListener('resize', () => {
+    document.body.classList.add('resizing');
+    if (window.innerWidth > 768) {
+        closeMenu();
+    }
+    clearTimeout(window.resizeTimer);
+    window.resizeTimer = setTimeout(() => {
+        document.body.classList.remove('resizing');
+    }, 150);
+});
+
+
+// SLIDER
+const slider = document.getElementById('slider');
+const sliderItems = document.querySelectorAll('.slider-item');
+const btnLeft = document.getElementById('btn-left');
+const btnRight = document.getElementById('btn-right');
+const bars = document.querySelectorAll('.coffee-bar');
+
+const slideCount = sliderItems.length;
+const firstSlide = sliderItems[0].cloneNode(true);
+const lastSlide = sliderItems[slideCount - 1].cloneNode(true);
+
+slider.append(firstSlide);
+slider.prepend(lastSlide);
+
+let currentSlide = 1;
+let isAnimating = false;
+let touchStartX = 0;
+let touchEndX = 0;
+
+const showSlide = (index, animate = true) => {
+    slider.style.transition = animate ? 'transform 0.3s ease' : 'none';
+    slider.style.transform = `translateX(-${index * 100}%)`;
+}
+const updateBar = () => {
+    let activeIndex = currentSlide - 1;
+    if (activeIndex < 0) {
+        activeIndex = slideCount - 1;
+    }
+    if (activeIndex >= slideCount) {
+        activeIndex = 0;
+    }
+    bars.forEach((bar, index) => {
+        bar.classList.toggle('bar-active', index === activeIndex);
+    });
+};
+
+btnRight.addEventListener('click', () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    currentSlide++;
+    showSlide(currentSlide);
+    updateBar();
+});
+
+slider.addEventListener('transitionend', () => {
+    if (currentSlide === slideCount + 1) {
+        currentSlide = 1;
+        showSlide(currentSlide, false);
+    }
+    if (currentSlide === 0) {
+        currentSlide = slideCount;
+        showSlide(currentSlide, false);
+    }
+    isAnimating = false;
+});
+
+btnLeft.addEventListener('click', () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    currentSlide--;
+    showSlide(currentSlide);
+    updateBar();
+});
+slider.addEventListener('touchstart', (event) => {
+    touchStartX = event.touches[0].clientX;
+});
+
+slider.addEventListener('touchend', (event) => {
+    touchEndX = event.changedTouches[0].clientX;
+    const swipeDistance = touchEndX - touchStartX;
+    if (Math.abs(swipeDistance) < 50) return;
+    if (isAnimating) return;
+    isAnimating = true;
+    if (swipeDistance < 0) {
+        currentSlide++;
+    } else {
+        currentSlide--;
+    }
+    showSlide(currentSlide);
+    updateBar();
+});
+showSlide(currentSlide);
