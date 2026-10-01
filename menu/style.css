@@ -65,7 +65,9 @@ html {
     background: var(--background-page);
     height: 100%;
 }
-
+.no-scroll {
+    overflow: hidden;
+}
 .container {
     max-width: 1440px;
     margin: 0 auto;
