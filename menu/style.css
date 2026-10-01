@@ -754,6 +754,7 @@ html {
         border-radius: 100px;
         background-color: var(--background-page);
         border: 1px solid var(--border-inverse);
+        cursor: pointer;
     }
     .refresh-button-hidden {
         display: none;
