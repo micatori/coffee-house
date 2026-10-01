@@ -257,7 +257,7 @@ class Modal {
       return button;
     };
     const spanS = createSizeButton('S', 'S', this.sizes.s.size, this.sizes.s['add-price']);
-    spanS.classList.add('modal-size-active');
+    spanS.classList.add('modal-button-active');
     const spanM = createSizeButton('M', 'M', this.sizes.m.size, this.sizes.m['add-price']);
     const spanL = createSizeButton('L', 'L', this.sizes.l.size, this.sizes.l['add-price']);
     divModalBoxSize.append(spanS, spanM, spanL);
