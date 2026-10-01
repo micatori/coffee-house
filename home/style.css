@@ -861,6 +861,10 @@ html {
     }
     .nav-open {
         transform: translateX(0);
+        transition: transform 0.3s ease;
+    }
+    .resizing .nav {
+        transition: none;
     }
     .nav-list {
         display: flex;
