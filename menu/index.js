@@ -116,9 +116,9 @@ class Product {
       <h3 class="coffee-description-title">${this.name}</h3>
       <p class="coffee-description-text">${this.description}</p>
       `;
+    let price = `<p class="coffee-description-price">$${this.price}</p>`;
+    divWrapper.innerHTML += price;
     template += divWrapper.outerHTML;
-    template += `<p class="coffee-description-price">$${this.price}</p>`
-
     divDescription.innerHTML = template;
     return divDescription;
     }
@@ -257,7 +257,7 @@ class Modal {
       return button;
     };
     const spanS = createSizeButton('S', 'S', this.sizes.s.size, this.sizes.s['add-price']);
-    spanS.classList.add('modal-size-active');
+    spanS.classList.add('modal-button-active');
     const spanM = createSizeButton('M', 'M', this.sizes.m.size, this.sizes.m['add-price']);
     const spanL = createSizeButton('L', 'L', this.sizes.l.size, this.sizes.l['add-price']);
     divModalBoxSize.append(spanS, spanM, spanL);
