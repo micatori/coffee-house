@@ -311,7 +311,7 @@ class Modal {
     const modalTotalSpan = document.createElement('span');
     modalTotalSpan.id = "total";
     modalTotalSpan.className = "modal-total-span";
-    modalTotalSpan.textContent = this.price;
+    modalTotalSpan.textContent = `$${this.price}`;
     divModalTotalWrapper.append(modalTotalSpan);
     // <div class="modal-info-wrapper">
     const modalInfoWrapper = document.createElement('div');
