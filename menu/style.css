@@ -424,6 +424,9 @@ html {
     text-align: center;
     color: var(--text-primary);
 }
+.dark-mode .modal-close-button {
+    border: 1px solid var(--text-inverse);
+}
 /* MAIN */
 .main {
     display: flex;
@@ -1055,9 +1058,8 @@ html {
     .modal-close-button:hover {
         border: 1px solid var(--background-container);
         background-color: var(--background-modal-control);
-        color: var(--background-modal);
+        color: var(--text-inverse);
         transition: all 0.3s;
         cursor: pointer;
     }
-
 }
