@@ -124,15 +124,22 @@ class Product {
     }
 }
 window.onload = function() {
-  let start = 8;
+  // let start = 8;
   if (products) {
     renderArticlesToDom();
+    // PAGINATTIION
+    refreshCards();
   }
   showOnlyCoffeeCards();
+  // /pag
+  refreshCards();
+
   // Tags
   addTagsClickHandler();
   // modal
   addCardsClickHandler();
+  // pag
+  addRefreshButtonHandler();
 }
 const generateArticles = (prod) => {
   let cards = [];
@@ -159,6 +166,9 @@ const addTagsClickHandler = () => {
       if (clickedBtn) {
         fiterCardsBySelectedBtn(clickedBtn.id);
       }
+
+      // Pagination
+      refreshCards();
   })
 }
 const removeSelectedBtn = () => {
@@ -378,5 +388,63 @@ const addCardsClickHandler = () => {
     const modal = new Modal(product);
     modal.openModal();
     document.body.classList.add('no-scroll');
+  });
+};
+
+
+
+// P
+// pagination
+const refreshCards = () => {
+  const cards = document.querySelectorAll('.menu-section .coffee-description');
+  const button = document.querySelector('.refresh-button');
+  const activeCategory = document.querySelector('.button-active').id;
+
+  if (window.innerWidth > 1110) {
+    cards.forEach(card => {
+      if (card.dataset.category === activeCategory) {
+        card.classList.remove('card_hidden');
+      } else {
+        card.classList.add('card_hidden');
+      }
+    });
+
+    button.classList.add('refresh-button-hidden');
+    return;
+  }
+
+  let visibleCards = 0;
+  cards.forEach(card => {
+    if (card.dataset.category === activeCategory) {
+      visibleCards++;
+      if (visibleCards <= 4) {
+        card.classList.remove('card_hidden');
+      } else {
+        card.classList.add('card_hidden');
+      }
+    } else {
+      card.classList.add('card_hidden');
+    }
+  });
+  if (visibleCards > 4) {
+    button.classList.remove('refresh-button-hidden');
+  } else {
+    button.classList.add('refresh-button-hidden');
+  }
+};
+
+window.addEventListener('resize', refreshCards);
+
+const addRefreshButtonHandler = () => {
+  const button = document.querySelector('.refresh-button');
+  button.addEventListener('click', () => {
+    const activeCategory = document.querySelector('.button-active').id;
+    const hiddenCards = document.querySelectorAll(
+      `.coffee-description[data-category="${activeCategory}"].card_hidden`
+    );
+    hiddenCards.forEach(card => {
+      card.classList.remove('card_hidden');
+    });
+    button.classList.add('refresh-button-hidden');
   });
 };

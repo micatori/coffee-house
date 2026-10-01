@@ -743,7 +743,7 @@ html {
     .second-row {
         display: none;
     }
-    .refresh-button {
+    .refresh-button-active {
         display: flex;
         width: 60px;
         height: 60px;
@@ -753,6 +753,9 @@ html {
         border-radius: 100px;
         background-color: var(--background-page);
         border: 1px solid var(--border-inverse);
+    }
+    .refresh-button-hidden {
+        display: none;
     }
 }
 @media screen and (max-width: 1001px) {
