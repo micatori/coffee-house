@@ -39,6 +39,8 @@
     /* modal */
 	--background-modal: var(--background-container);
 	--background-modal-control: var(--background-page);
+    --dark-bg-modal-control: #292826;
+    --dark-bg-container: #403F3D;
 }
 
 * {
@@ -353,6 +355,13 @@ html {
 }
 .modal-button-active .modal-size {
     background: var(--text-inverse);
+}
+.dark-mode .modal-button-active {
+    background-color: var(--dark-bg-modal-control);
+    border: 1px solid var(--dark-bg-modal-control);
+}
+.dark-mode .modal-button-active .modal-size {
+    background-color: var(--dark-bg-container);
 }
 .modal-total-wrapper {
     display: flex;
