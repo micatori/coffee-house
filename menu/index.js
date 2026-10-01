@@ -91,6 +91,17 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+window.addEventListener('resize', () => {
+    document.body.classList.add('resizing');
+    if (window.innerWidth > 768) {
+        closeMenu();
+    }
+    clearTimeout(window.resizeTimer);
+    window.resizeTimer = setTimeout(() => {
+        document.body.classList.remove('resizing');
+    }, 150);
+});
+
 // CARDS
 class Product {
     constructor({ id, name, description, price, category }) {

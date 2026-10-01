@@ -89,6 +89,18 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+window.addEventListener('resize', () => {
+    document.body.classList.add('resizing');
+    if (window.innerWidth > 768) {
+        closeMenu();
+    }
+    clearTimeout(window.resizeTimer);
+    window.resizeTimer = setTimeout(() => {
+        document.body.classList.remove('resizing');
+    }, 150);
+});
+
+
 // SLIDER
 const slider = document.getElementById('slider');
 const sliderItems = document.querySelectorAll('.slider-item');
