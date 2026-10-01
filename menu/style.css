@@ -65,7 +65,9 @@ html {
     background: var(--background-page);
     height: 100%;
 }
-
+.no-scroll {
+    overflow: hidden;
+}
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -267,8 +269,6 @@ html {
     z-index: 1000;
     min-width: 800px;
     min-height: 504px;
-    /* justify-content: center;
-    align-items: center; */
     background-color: var(--background-modal);
     padding: 16px;
     border-radius: 40px;
@@ -777,10 +777,6 @@ html {
     .nav-item {
         margin-right: 0;
     }
-    /* .modal {
-        max-width: 750px;
-        min-width: 688px;
-    } */
 }
 @media screen and (max-width: 900px) {
     .main-title {
@@ -790,26 +786,10 @@ html {
         gap: 40px;
     }
 }
-@media screen and (max-width: 800px) {
-    /* .modal {
-        max-width: 688px;
-        min-height: 626px;
-    }
-    .modal-button {
-        margin-bottom: 8px;
-    } */
-}
 @media screen and (max-width: 768px) {
     .no-scroll {
         overflow: hidden;
     }
-    /* .modal {
-        width: 688px;
-        height: 626px;
-    }
-    .modal-button {
-        margin-bottom: 8px;
-    } */
     .nav {
         display: flex;
         position: fixed;
@@ -944,13 +924,6 @@ html {
 }
 @media screen and (min-width: 360px) and (max-width: 767px) {
     /* от 380 до 767 */
-    /* .modal {
-        max-width: 688px;
-        min-height: 626px;
-    }
-    .modal-button {
-        margin-bottom: 8px;
-    } */
     .header-wrapper {
         padding: 20px 16px;
     }

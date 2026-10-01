@@ -257,7 +257,7 @@ class Modal {
       return button;
     };
     const spanS = createSizeButton('S', 'S', this.sizes.s.size, this.sizes.s['add-price']);
-    spanS.classList.add('modal-button-active');
+    spanS.classList.add('modal-active');
     const spanM = createSizeButton('M', 'M', this.sizes.m.size, this.sizes.m['add-price']);
     const spanL = createSizeButton('L', 'L', this.sizes.l.size, this.sizes.l['add-price']);
     divModalBoxSize.append(spanS, spanM, spanL);
@@ -358,6 +358,7 @@ class Modal {
       this.overlay = null;
     }
     document.removeEventListener('keydown', this.handleEscape);
+    document.body.classList.remove('no-scroll');
   }
 
   handleEscape = (event) => {
@@ -376,5 +377,6 @@ const addCardsClickHandler = () => {
     if (!product) return;
     const modal = new Modal(product);
     modal.openModal();
+    document.body.classList.add('no-scroll');
   });
 };
