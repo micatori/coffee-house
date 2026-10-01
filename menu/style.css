@@ -23,7 +23,7 @@
 	--border-inverse: #665f55;
     /* modal */
     --background-modal: #e1d4c9;
-	--background-modalcontrol: #665f55;
+	--background-modal-control: #665f55;
 }
 .dark-mode {
     /* dark */
@@ -336,6 +336,7 @@ html {
     font-weight: 600;
     font-size: 16px;
     color: var(--text-primary);
+    transition: all 0.3s;
 }
 .modal-size {
     display: inline-block;
@@ -1025,4 +1026,33 @@ html {
     .footer-link-container:focus:after {
         width: 100%;
     }
+
+    .modal-button:hover {
+        color: var(--text-inverse);
+        background: var(--background-container);
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .modal-button:hover .modal-size {
+        background: var(--text-inverse);
+        transition: all 0.3s;
+    }
+    .dark-mode .modal-button:hover {
+        background-color: var(--dark-bg-modal-control);
+        border: 1px solid var(--dark-bg-modal-control);
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    .dark-mode .modal-button:hover .modal-size {
+        background-color: var(--dark-bg-container);
+        transition: all 0.3s;
+    }
+    .modal-close-button:hover {
+        border: 1px solid var(--background-container);
+        background-color: var(--background-modal-control);
+        color: var(--background-modal);
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
 }
