@@ -116,9 +116,9 @@ class Product {
       <h3 class="coffee-description-title">${this.name}</h3>
       <p class="coffee-description-text">${this.description}</p>
       `;
+    let price = `<p class="coffee-description-price">$${this.price}</p>`;
+    divWrapper.innerHTML += price;
     template += divWrapper.outerHTML;
-    template += `<p class="coffee-description-price">$${this.price}</p>`
-
     divDescription.innerHTML = template;
     return divDescription;
     }

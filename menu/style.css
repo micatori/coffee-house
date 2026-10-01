@@ -546,6 +546,8 @@ html {
 .wrapper-coffee-article {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
 }
 .coffee-description-title {
     color: var(--text-primary);
@@ -573,7 +575,7 @@ html {
     color: var(--text-primary);
     text-align: left;
     margin-left: 20px;
-    margin-top: 36px;
+    /* margin-top: 36px; */
     margin-bottom: 0;
     font-family: 'Inter';
     font-size: 24px;
