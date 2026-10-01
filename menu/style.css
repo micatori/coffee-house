@@ -265,7 +265,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    max-width: 800px;
+    min-width: 800px;
     min-height: 504px;
     /* justify-content: center;
     align-items: center; */
@@ -727,6 +727,13 @@ html {
 }
 
 @media screen and (max-width: 1110px) {
+    .modal {
+        min-width: 688px;
+        height: 626px;
+    }
+    .modal-button {
+        margin-bottom: 8px;
+    }
     .menu-section {
         padding: 0px 14px;
         gap: 20px;
@@ -770,6 +777,10 @@ html {
     .nav-item {
         margin-right: 0;
     }
+    /* .modal {
+        max-width: 750px;
+        min-width: 688px;
+    } */
 }
 @media screen and (max-width: 900px) {
     .main-title {
@@ -780,12 +791,25 @@ html {
     }
 }
 @media screen and (max-width: 800px) {
-    /* от 801 и ниже */
+    /* .modal {
+        max-width: 688px;
+        min-height: 626px;
+    }
+    .modal-button {
+        margin-bottom: 8px;
+    } */
 }
 @media screen and (max-width: 768px) {
     .no-scroll {
         overflow: hidden;
     }
+    /* .modal {
+        width: 688px;
+        height: 626px;
+    }
+    .modal-button {
+        margin-bottom: 8px;
+    } */
     .nav {
         display: flex;
         position: fixed;
@@ -881,6 +905,21 @@ html {
             width: 40px;
         }
     }
+
+}
+@media screen and (max-width: 750px) {
+    .modal-img-box {
+        display: none;
+    }
+    .modal {
+        max-width: 688px;
+        min-width: 342px;
+        min-height: 626px;
+        max-height: 650px;
+    }
+    .modal-button {
+        margin-bottom: 8px;
+    }
 }
 @media screen and (max-width: 600px) {
     .footer-wrapper-column {
@@ -905,6 +944,13 @@ html {
 }
 @media screen and (min-width: 360px) and (max-width: 767px) {
     /* от 380 до 767 */
+    /* .modal {
+        max-width: 688px;
+        min-height: 626px;
+    }
+    .modal-button {
+        margin-bottom: 8px;
+    } */
     .header-wrapper {
         padding: 20px 16px;
     }
